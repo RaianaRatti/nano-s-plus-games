@@ -228,6 +228,7 @@ static void jump(void)
 void runner_enter(void)
 {
     run_enter(&run, BEST_RUNNER);
+    start_play();
 }
 
 void runner_suspend(void)
@@ -277,7 +278,7 @@ static void draw_field(void)
     ui_number(line, run.score, NULL);
 
     ui_page();
-    ui_header("RUNNER", line);
+    ui_bar(NULL, line);
 
     // A moon, and the rooftop: its edge, and the joints of its tiles going by.
     gfx_round_rect(108, 14, 7, 7, true);
@@ -331,18 +332,10 @@ static void draw_field(void)
 
 void runner_draw(void)
 {
-    switch (run.mode) {
-        case RUN_TITLE:
-            run_draw_title(&run, "RUNNER", G_RIGHT " JUMP  HOLD " G_LEFT " DUCK", NULL);
-            break;
-        case RUN_OVER:
-            run_draw_over(&run, "RUNNER", "SCORE", NULL);
-            break;
-        default:
-            draw_field();
-            if (run.mode == RUN_PAUSED) {
-                run_draw_paused();
-            }
-            break;
+    if (run.mode == RUN_OVER) {
+        run_draw_over(&run);
+        return;
     }
+    draw_field();
+    run_draw_overlay(&run);
 }

@@ -9,7 +9,7 @@
 // The ball moves in steps of at most one pixel within a tick, so a fast ball cannot pass through a
 // paddle.
 //
-//   Title    LEFT and RIGHT choose the mode, BOTH starts, HOLD goes back to the launcher.
+//   Title    LEFT picks 1 player, RIGHT 2 players, BOTH starts, HOLD goes back to the launcher.
 //   Playing  HOLD returns to the title. With one player BOTH pauses; two players press both
 //            buttons together during play all the time, so they pause by locking the device.
 //   Over     BOTH plays again, HOLD returns to the title.
@@ -255,7 +255,7 @@ void pong_event(event_t event, uint8_t buttons)
     switch (mode) {
         case TITLE:
             if (event == EV_LEFT || event == EV_RIGHT) {
-                two_players = !two_players;
+                two_players = event == EV_RIGHT;
                 ui_dirty();
             }
             else if (event == EV_SELECT) {
@@ -316,38 +316,14 @@ void pong_tick(void)
 // Screens
 // ---------------------------------------------------------------------------------------------
 
-static const char *name(int who)
-{
-    if (two_players) {
-        return who == P_LEFT ? "LEFT" : "RIGHT";
-    }
-    return who == P_LEFT ? "YOU" : "CPU";
-}
-
 static void draw_court(void)
 {
     char left[16], right[16];
-    char digits[16];
-
-    // "YOU 2" on the left, "1 CPU" on the right.
-    int n = 0;
-    for (const char *p = name(P_LEFT); *p; p++) {
-        left[n++] = *p;
-    }
-    left[n++] = ' ';
-    ui_number(left + n, points[P_LEFT], NULL);
-    ui_number(digits, points[P_RIGHT], " ");
-    n = 0;
-    for (const char *p = digits; *p; p++) {
-        right[n++] = *p;
-    }
-    for (const char *p = name(P_RIGHT); *p; p++) {
-        right[n++] = *p;
-    }
-    right[n] = '\0';
+    ui_number(left, points[P_LEFT], NULL);
+    ui_number(right, points[P_RIGHT], NULL);
 
     ui_page();
-    ui_header(left, right);
+    ui_bar(left, right);
     for (int y = TOP + 1; y < BOTTOM; y += 4) {
         gfx_fill_rect(GFX_W / 2 - 1, y, 1, 2, true);
     }
@@ -358,27 +334,38 @@ static void draw_court(void)
     }
 }
 
+// One of the two modes on the title: inked when chosen, an outline when not.
+static void draw_choice(int x, const char *text, bool chosen)
+{
+    if (chosen) {
+        gfx_bubble(x, 28, 40, 24, 2, true);
+    }
+    else {
+        gfx_bubble(x, 28, 40, 24, 2, true);
+        gfx_bubble(x + 1, 29, 38, 22, 1, false);
+    }
+    gfx_text_center(x + 20, 33, text, 2, !chosen);
+}
+
 static void draw_over(void)
 {
     char line[24];
     int  winner = points[P_LEFT] >= POINTS ? P_LEFT : P_RIGHT;
 
     ui_page();
-    ui_header(UI_HEADER, "PONG");
     if (two_players) {
-        gfx_text_center(GFX_W / 2, 13, winner == P_LEFT ? "LEFT WINS" : "RIGHT WINS", 2, true);
+        gfx_text_center(GFX_W / 2, 8, winner == P_LEFT ? G_LEFT " wins!" : "wins! " G_RIGHT, 2, true);
     }
     else {
-        gfx_text_center(GFX_W / 2, 13, winner == P_LEFT ? "YOU WIN" : "CPU WINS", 2, true);
+        gfx_text_center(GFX_W / 2, 8, winner == P_LEFT ? "yay!" : "aww...", 2, true);
     }
-    ui_number(line, points[P_LEFT], " " G_DOT " ");
+    ui_number(line, points[P_LEFT], " " G_HEART " ");
     int n = 0;
     while (line[n]) {
         n++;
     }
     ui_number(line + n, points[P_RIGHT], NULL);
-    gfx_text_center(GFX_W / 2, 35, line, 1, true);
-    ui_footer("BOTH:AGAIN", "HOLD:BACK");
+    gfx_text_center(GFX_W / 2, 34, line, 2, true);
 }
 
 void pong_draw(void)
@@ -386,15 +373,9 @@ void pong_draw(void)
     switch (mode) {
         case TITLE:
             ui_page();
-            ui_header(UI_HEADER, "PONG");
-            gfx_text_center(GFX_W / 2, 13, "PONG", 2, true);
-            gfx_text(1, 31, G_LEFT, 1, true);
-            gfx_text_right(GFX_W - 1, 31, G_RIGHT, 1, true);
-            gfx_text_center(GFX_W / 2, 31, two_players ? "2 PLAYERS" : "1 PLAYER VS CPU", 1, true);
-            gfx_text_center(GFX_W / 2, 42,
-                            two_players ? "PRESS TO TURN AROUND" : G_LEFT " UP  " G_RIGHT " DOWN",
-                            1, true);
-            ui_footer("BOTH:START", "HOLD:BACK");
+            ui_icon(APP_PONG - APP_DODGE, GFX_W / 2 - 8, 4, 1);
+            draw_choice(16, "1p", !two_players);
+            draw_choice(GFX_W - 16 - 40, "2p", two_players);
             break;
 
         case SERVE:
@@ -404,11 +385,7 @@ void pong_draw(void)
 
         case PAUSED:
             draw_court();
-            gfx_fill_rect(14, 20, GFX_W - 28, 28, false);
-            gfx_rect(14, 20, GFX_W - 28, 28, true);
-            gfx_text_center(GFX_W / 2, 24, "PAUSED", 1, true);
-            gfx_text_center(GFX_W / 2, 33, "BOTH:RESUME", 1, true);
-            gfx_text_center(GFX_W / 2, 40, "HOLD:QUIT", 1, true);
+            ui_pause_sign();
             break;
 
         case OVER:

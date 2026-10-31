@@ -6,7 +6,9 @@
 // format, so showing a frame is one draw of the image: a column is 8 bytes, pixel (x, y) is bit
 // (7 - y % 8) of byte (127 - x) * 8 + y / 8.
 //
-// A set bit is lit (white on the Nano's black screen).
+// A set bit is lit. The arcade has a light theme: it draws dark ink on a lit screen, so "on" (ink)
+// is a clear bit and the blank page is all lit. Everything is drawn through gfx_pixel() and
+// gfx_clear(), which are the only places that know.
 
 #include <string.h>
 
@@ -46,7 +48,7 @@ void gfx_init(void)
     image->buffer               = &fb_icon;
     children[0]                 = (nbgl_obj_t *) image;
 
-    memset(fb, 0, sizeof(fb));
+    gfx_clear(false);
 }
 
 // Draws the screen again: its background, then the framebuffer image over all of it. (Drawing the
@@ -56,9 +58,12 @@ void gfx_present(void)
     nbgl_screenRedraw();
 }
 
+// Dark ink on a lit page.
+#define LIGHT_THEME true
+
 void gfx_clear(bool on)
 {
-    memset(fb, on ? 0xFF : 0x00, sizeof(fb));
+    memset(fb, (on != LIGHT_THEME) ? 0xFF : 0x00, sizeof(fb));
 }
 
 void gfx_pixel(int x, int y, bool on)
@@ -68,7 +73,7 @@ void gfx_pixel(int x, int y, bool on)
     }
     uint8_t *byte = &fb[(GFX_W - 1 - x) * (GFX_H / 8) + y / 8];
     uint8_t  bit  = 0x80 >> (y % 8);
-    if (on) {
+    if (on != LIGHT_THEME) {
         *byte |= bit;
     }
     else {
@@ -111,7 +116,8 @@ void gfx_dotted_hline(int x, int y, int w, bool on)
 }
 
 // ---------------------------------------------------------------------------------------------
-// Text: the classic 5 x 7 font, upper case. Each glyph is 5 columns, bit 0 at the top.
+// Text: the classic 5 x 7 font, upper and lower case. Each glyph is 5 columns, bit 0 at the top;
+// the tails of g, j, p, q and y reach one row lower, into bit 7.
 // ---------------------------------------------------------------------------------------------
 
 static const uint8_t FONT[][FONT_W] = {
@@ -181,19 +187,50 @@ static const uint8_t FONT[][FONT_W] = {
     {0x40, 0x40, 0x40, 0x40, 0x40},  // _
 };
 
+static const uint8_t LOWER[26][FONT_W] = {
+    {0x20, 0x54, 0x54, 0x54, 0x78},  // a
+    {0x7F, 0x48, 0x44, 0x44, 0x38},  // b
+    {0x38, 0x44, 0x44, 0x44, 0x20},  // c
+    {0x38, 0x44, 0x44, 0x48, 0x7F},  // d
+    {0x38, 0x54, 0x54, 0x54, 0x18},  // e
+    {0x08, 0x7E, 0x09, 0x01, 0x02},  // f
+    {0x98, 0xA4, 0xA4, 0xA4, 0x7C},  // g
+    {0x7F, 0x08, 0x04, 0x04, 0x78},  // h
+    {0x00, 0x44, 0x7D, 0x40, 0x00},  // i
+    {0x00, 0x40, 0x80, 0x7D, 0x00},  // j
+    {0x7F, 0x10, 0x28, 0x44, 0x00},  // k
+    {0x00, 0x41, 0x7F, 0x40, 0x00},  // l
+    {0x7C, 0x04, 0x18, 0x04, 0x78},  // m
+    {0x7C, 0x08, 0x04, 0x04, 0x78},  // n
+    {0x38, 0x44, 0x44, 0x44, 0x38},  // o
+    {0xFC, 0x24, 0x24, 0x24, 0x18},  // p
+    {0x18, 0x24, 0x24, 0x24, 0xFC},  // q
+    {0x7C, 0x08, 0x04, 0x04, 0x08},  // r
+    {0x48, 0x54, 0x54, 0x54, 0x20},  // s
+    {0x04, 0x3F, 0x44, 0x40, 0x20},  // t
+    {0x3C, 0x40, 0x40, 0x20, 0x7C},  // u
+    {0x1C, 0x20, 0x40, 0x20, 0x1C},  // v
+    {0x3C, 0x40, 0x30, 0x40, 0x3C},  // w
+    {0x44, 0x28, 0x10, 0x28, 0x44},  // x
+    {0x9C, 0xA0, 0xA0, 0xA0, 0x7C},  // y
+    {0x44, 0x64, 0x54, 0x4C, 0x44},  // z
+};
+
 static const uint8_t GLYPHS[][FONT_W] = {
     {0x08, 0x1C, 0x3E, 0x7F, 0x00},  // G_LEFT
     {0x00, 0x7F, 0x3E, 0x1C, 0x08},  // G_RIGHT
     {0x00, 0x00, 0x08, 0x00, 0x00},  // G_DOT
+    {0x0C, 0x1E, 0x3C, 0x1E, 0x0C},  // G_HEART
+    {0x24, 0x1C, 0x0F, 0x1C, 0x24},  // G_STAR
 };
 
 static const uint8_t *glyph(char c)
 {
-    if (c >= 1 && c <= 3) {
+    if (c >= 1 && c <= 5) {
         return GLYPHS[c - 1];
     }
     if (c >= 'a' && c <= 'z') {
-        c = (char) (c - 'a' + 'A');
+        return LOWER[c - 'a'];
     }
     if (c < ' ' || c > '_') {
         c = '?';
@@ -216,7 +253,7 @@ int gfx_text(int x, int y, const char *text, int scale, bool on)
     for (; *text; text++) {
         const uint8_t *g = glyph(*text);
         for (int col = 0; col < FONT_W; col++) {
-            for (int row = 0; row < FONT_H; row++) {
+            for (int row = 0; row < FONT_H + 1; row++) {  // + 1: the tails
                 if (g[col] & (1 << row)) {
                     gfx_fill_rect(x + col * scale, y + row * scale, scale, scale, on);
                 }
@@ -243,12 +280,27 @@ void gfx_text_right(int right, int y, const char *text, int scale, bool on)
 
 void gfx_sprite(int x, int y, const uint16_t *rows, int w, int h, bool flip, bool on)
 {
+    gfx_sprite_scaled(x, y, rows, w, h, flip, on, 1);
+}
+
+void gfx_sprite_scaled(int x, int y, const uint16_t *rows, int w, int h, bool flip, bool on, int scale)
+{
     for (int row = 0; row < h; row++) {
         uint16_t bits = rows[flip ? h - 1 - row : row];
         for (int col = 0; col < w; col++) {
             if (bits & (1u << (w - 1 - col))) {
-                gfx_pixel(x + col, y + row, on);
+                gfx_fill_rect(x + col * scale, y + row * scale, scale, scale, on);
             }
         }
+    }
+}
+
+// A filled rectangle with its corners rounded off by `r` pixels (0, 1 or 2): a speech bubble.
+void gfx_bubble(int x, int y, int w, int h, int r, bool on)
+{
+    for (int j = 0; j < h; j++) {
+        // r 2 takes 2 pixels off each end of the first row and 1 off the second.
+        int cut = j < r ? r - j : (j >= h - r ? j - (h - 1 - r) : 0);
+        gfx_fill_rect(x + cut, y + j, w - 2 * cut, 1, on);
     }
 }

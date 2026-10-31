@@ -1,8 +1,7 @@
 // Cave: hold a button to climb, let go to sink. The cave scrolls by, winds up and down and
 // narrows, and now and then a rock stands in the middle of it. The score is the distance flown.
 //
-// The copter hovers until the first press. Hold one button, not both: both held is HOLD, which
-// ends the run. The cave is a ring of columns SEG pixels wide, each with its ceiling, its floor and
+// Hold one button, not both: both held is HOLD, which ends the run. The cave is a ring of columns SEG pixels wide, each with its ceiling, its floor and
 // maybe a rock.
 
 #include "arcade.h"
@@ -75,8 +74,6 @@ static uint8_t  rock_left;
 static uint8_t  rock_y;
 static uint32_t distance;
 static uint32_t ticks;
-static bool     started;  // the first press came
-static uint8_t  rotor;
 
 static seg_t *seg(int i)
 {
@@ -129,7 +126,6 @@ static void start_play(void)
     speed    = SPEED_START;
     distance = 0;
     ticks    = 0;
-    started  = false;
 }
 
 static bool crashed(void)
@@ -158,21 +154,12 @@ static bool crashed(void)
 
 static void play_tick(void)
 {
-    rotor++;
-    uint8_t held = input_held();
-    if (!started) {
-        started = held && held != BTN_BOTH;
-        if (!started) {
-            ui_dirty();
-            return;
-        }
-    }
-
     ticks++;
     if (ticks % 30 == 0 && speed < SPEED_MAX) {
         speed += SPEED_GAIN;
     }
 
+    uint8_t held = input_held();
     if (held && held != BTN_BOTH) {
         vy = vy - LIFT < -RISE_MAX ? -RISE_MAX : vy - LIFT;
     }
@@ -203,6 +190,7 @@ static void play_tick(void)
 void cave_enter(void)
 {
     run_enter(&run, BEST_CAVE);
+    start_play();
 }
 
 void cave_suspend(void)
@@ -228,10 +216,10 @@ void cave_tick(void)
 static void draw_field(void)
 {
     char line[16];
-    ui_number(line, run.score, " M");
+    ui_number(line, run.score, NULL);
 
     ui_page();
-    ui_header("CAVE", line);
+    ui_bar(NULL, line);
     for (int i = 0; i < NB_SEGS; i++) {
         int    sx = i * SEG - (int) (shift / FP);
         seg_t *s  = seg(i);
@@ -241,26 +229,15 @@ static void draw_field(void)
             gfx_fill_rect(sx, s->rock, SEG, ROCK_H, true);
         }
     }
-    gfx_sprite(COPTER_X, (int) (y / FP), COPTER[rotor % 2], COPTER_W, COPTER_H, false, true);
-    if (!started && run.mode == RUN_PLAY) {
-        gfx_text_center(GFX_W / 2 + 8, 20, "HOLD TO RISE", 1, true);
-    }
+    gfx_sprite(COPTER_X, (int) (y / FP), COPTER[ticks % 2], COPTER_W, COPTER_H, false, true);
 }
 
 void cave_draw(void)
 {
-    switch (run.mode) {
-        case RUN_TITLE:
-            run_draw_title(&run, "CAVE", "HOLD A BUTTON TO RISE", " M");
-            break;
-        case RUN_OVER:
-            run_draw_over(&run, "CAVE", "DISTANCE", " M");
-            break;
-        default:
-            draw_field();
-            if (run.mode == RUN_PAUSED) {
-                run_draw_paused();
-            }
-            break;
+    if (run.mode == RUN_OVER) {
+        run_draw_over(&run);
+        return;
     }
+    draw_field();
+    run_draw_overlay(&run);
 }

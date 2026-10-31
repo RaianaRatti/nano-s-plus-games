@@ -153,6 +153,7 @@ static void steer(int way)
 void racer_enter(void)
 {
     run_enter(&run, BEST_RACER);
+    start_play();
 }
 
 void racer_suspend(void)
@@ -194,10 +195,10 @@ void racer_tick(void)
 static void draw_field(void)
 {
     char line[16];
-    ui_number(line, run.score, " M");
+    ui_number(line, run.score, NULL);
 
     ui_page();
-    ui_header("RACER", line);
+    ui_bar(NULL, line);
 
     // The lane markings scroll toward the player; the road's edges are solid.
     for (int l = 1; l < LANES; l++) {
@@ -220,18 +221,10 @@ static void draw_field(void)
 
 void racer_draw(void)
 {
-    switch (run.mode) {
-        case RUN_TITLE:
-            run_draw_title(&run, "RACER", G_LEFT " UP A LANE  " G_RIGHT " DOWN", " M");
-            break;
-        case RUN_OVER:
-            run_draw_over(&run, "RACER", "DISTANCE", " M");
-            break;
-        default:
-            draw_field();
-            if (run.mode == RUN_PAUSED) {
-                run_draw_paused();
-            }
-            break;
+    if (run.mode == RUN_OVER) {
+        run_draw_over(&run);
+        return;
     }
+    draw_field();
+    run_draw_overlay(&run);
 }

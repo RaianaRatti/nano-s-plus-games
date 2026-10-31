@@ -36,6 +36,8 @@
 #define G_LEFT  "\x01"  // a triangle pointing left
 #define G_RIGHT "\x02"  // a triangle pointing right
 #define G_DOT   "\x03"  // a middle dot
+#define G_HEART "\x04"
+#define G_STAR  "\x05"
 
 void gfx_init(void);
 void gfx_present(void);
@@ -54,21 +56,24 @@ void gfx_text_right(int right, int y, const char *text, int scale, bool on);
 // 0b0110 is ".XX.". Only the set bits are drawn (lit, or cut out when on is false). flip draws it
 // upside down.
 void gfx_sprite(int x, int y, const uint16_t *rows, int w, int h, bool flip, bool on);
+void gfx_sprite_scaled(int x, int y, const uint16_t *rows, int w, int h, bool flip, bool on, int scale);
+void gfx_bubble(int x, int y, int w, int h, int r, bool on);
 
 // ---------------------------------------------------------------------------------------------
-// The receipt look: ui.c
+// The look: ui.c and icons.c
 // ---------------------------------------------------------------------------------------------
 
-#define UI_HEADER  "BADGEOS"
-#define UI_TOP     10  // the first row under the header's rule
-#define UI_BOTTOM  54  // the footer's rule
+#define UI_TOP 10  // the first row under the bar
 
 void ui_dirty(void);
 bool ui_take_dirty(void);
 void ui_page(void);
-void ui_header(const char *left, const char *right);
-void ui_footer(const char *left, const char *right);
+void ui_bar(const char *left, const char *right);
 void ui_rule(int y);
+void ui_bubble_text(int cx, int y, const char *text, int scale);
+void ui_best(int cx, int y, uint32_t best);
+void ui_pause_sign(void);
+void ui_icon(uint8_t card, int x, int y, int scale);  // card: the launcher's, 0 .. NB_GAMES
 
 // Formats an unsigned number, optionally followed by a suffix, into out (at least 16 bytes).
 void ui_number(char *out, uint32_t value, const char *suffix);
@@ -156,12 +161,12 @@ uint32_t random_range(uint32_t low, uint32_t high);
 // A run of a score game: run.c
 // ---------------------------------------------------------------------------------------------
 
-typedef enum { RUN_TITLE, RUN_PLAY, RUN_PAUSED, RUN_CRASH, RUN_OVER } run_mode_t;
+typedef enum { RUN_READY, RUN_PLAY, RUN_PAUSED, RUN_CRASH, RUN_OVER } run_mode_t;
 
 typedef struct {
     run_mode_t mode;
     best_t     slot;
-    uint8_t    ticks;  // left in the crash, or before the game-over screen returns to the title
+    uint8_t    ticks;  // left in the countdown or the crash
     bool       new_best;
     uint32_t   score;
     uint32_t   best;
@@ -169,7 +174,7 @@ typedef struct {
 
 typedef enum {
     RUN_NOTHING,  // the run used the event
-    RUN_START,    // a new run begins: set up the world
+    RUN_START,    // a new run begins (after the first, which run_enter starts): set up the world
     RUN_INPUT,    // in play: the event is for the game
 } run_action_t;
 
@@ -179,9 +184,8 @@ bool         run_tick(run_t *run);  // true when the world should move
 void         run_suspend(run_t *run);
 void         run_crash(run_t *run);  // still field for a moment, then game over
 void         run_over(run_t *run);   // game over at once
-void         run_draw_title(const run_t *run, const char *name, const char *hint, const char *unit);
-void         run_draw_paused(void);
-void         run_draw_over(const run_t *run, const char *name, const char *label, const char *unit);
+void         run_draw_overlay(const run_t *run);  // over the field: countdown or pause sign
+void         run_draw_over(const run_t *run);
 
 // ---------------------------------------------------------------------------------------------
 // The apps

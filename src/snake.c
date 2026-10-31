@@ -154,6 +154,7 @@ static void turn(int8_t way)
 void snake_enter(void)
 {
     run_enter(&run, BEST_SNAKE);
+    start_play();
 }
 
 void snake_suspend(void)
@@ -206,7 +207,7 @@ static void draw_field(void)
     ui_number(score, run.score, NULL);
 
     ui_page();
-    ui_header("SNAKE", score);
+    ui_bar(NULL, score);
     gfx_rect(0, ORIGIN_Y - 1, GFX_W, GFX_H - ORIGIN_Y + 1, true);
 
     // The body, tail to head: a 3 x 3 square per cell, joined to the next one.
@@ -241,18 +242,10 @@ static void draw_field(void)
 
 void snake_draw(void)
 {
-    switch (run.mode) {
-        case RUN_TITLE:
-            run_draw_title(&run, "SNAKE", G_LEFT " " G_RIGHT " TURN THE SNAKE", NULL);
-            break;
-        case RUN_OVER:
-            run_draw_over(&run, "SNAKE", "EATEN", NULL);
-            break;
-        default:
-            draw_field();
-            if (run.mode == RUN_PAUSED) {
-                run_draw_paused();
-            }
-            break;
+    if (run.mode == RUN_OVER) {
+        run_draw_over(&run);
+        return;
     }
+    draw_field();
+    run_draw_overlay(&run);
 }

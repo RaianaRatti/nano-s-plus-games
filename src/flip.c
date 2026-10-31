@@ -230,6 +230,7 @@ static void play_tick(void)
 void flip_enter(void)
 {
     run_enter(&run, BEST_FLIP);
+    start_play();
 }
 
 void flip_suspend(void)
@@ -292,10 +293,10 @@ static void draw_band(int sx, int band_y, bool hole, bool spike, bool up)
 static void draw_field(void)
 {
     char line[16];
-    ui_number(line, run.score, " M");
+    ui_number(line, run.score, NULL);
 
     ui_page();
-    ui_header("FLIP", line);
+    ui_bar(NULL, line);
     for (int i = 0; i < NB_TILES; i++) {
         int     sx = i * TILE - (int) (shift / FP);
         uint8_t t  = *tile(i);
@@ -309,18 +310,10 @@ static void draw_field(void)
 
 void flip_draw(void)
 {
-    switch (run.mode) {
-        case RUN_TITLE:
-            run_draw_title(&run, "FLIP", "PRESS TO FLIP GRAVITY", " M");
-            break;
-        case RUN_OVER:
-            run_draw_over(&run, "FLIP", "DISTANCE", " M");
-            break;
-        default:
-            draw_field();
-            if (run.mode == RUN_PAUSED) {
-                run_draw_paused();
-            }
-            break;
+    if (run.mode == RUN_OVER) {
+        run_draw_over(&run);
+        return;
     }
+    draw_field();
+    run_draw_overlay(&run);
 }

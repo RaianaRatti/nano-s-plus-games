@@ -1,31 +1,32 @@
 // A run: the life of a score game, shared by Dodge, Snake, Bricks, Racer, Cave, Flip and Runner.
 //
-//   Title    BOTH plays, HOLD goes back to the launcher.
-//   Play     the game's own controls. BOTH pauses, HOLD ends the run (the score still counts).
-//   Paused   BOTH resumes, HOLD ends the run. The game also pauses when the device locks.
+//   Ready    the field and a 3, 2, 1 countdown. HOLD goes back to the launcher.
+//   Play     the game's own controls. BOTH pauses, HOLD goes back (the score still counts).
+//   Paused   BOTH resumes, HOLD goes back. The game also pauses when the device locks.
 //   Crash    the field stays still for a moment so the player sees what happened.
-//   Over     any button, or 3 s, returns to the title.
+//   Over     the score and the best. BOTH plays again, HOLD goes back.
 //
 // The game keeps its world; the run keeps the mode, the score and the best score, and draws the
-// screens that are the same in every game.
+// screens that are the same in every game. Opening a game starts a run at once.
 
 #include "arcade.h"
 
+#define READY_TICKS 15
 #define CRASH_TICKS 8
-#define OVER_TICKS  30
+
+static void get_ready(run_t *run)
+{
+    run->mode  = RUN_READY;
+    run->ticks = READY_TICKS;
+    run->score = 0;
+    ui_dirty();
+}
 
 void run_enter(run_t *run, best_t slot)
 {
     run->slot = slot;
     run->best = storage_best(slot);
-    run->mode = RUN_TITLE;
-    ui_dirty();
-}
-
-static void to_title(run_t *run)
-{
-    run->mode = RUN_TITLE;
-    ui_dirty();
+    get_ready(run);
 }
 
 static void end_run(run_t *run)
@@ -37,11 +38,16 @@ static void end_run(run_t *run)
     }
 }
 
+static void leave(run_t *run)
+{
+    end_run(run);
+    shell_back();
+}
+
 void run_over(run_t *run)
 {
     end_run(run);
-    run->mode  = RUN_OVER;
-    run->ticks = OVER_TICKS;
+    run->mode = RUN_OVER;
     input_swallow();  // the hand is still on a button: its release must not leave this screen
     ui_dirty();
 }
@@ -57,15 +63,10 @@ void run_crash(run_t *run)
 run_action_t run_event(run_t *run, event_t event)
 {
     switch (run->mode) {
-        case RUN_TITLE:
-            if (event == EV_SELECT) {
-                run->mode  = RUN_PLAY;
-                run->score = 0;
-                ui_dirty();
-                return RUN_START;
-            }
+        case RUN_READY:
+        case RUN_CRASH:
             if (event == EV_BACK) {
-                shell_back();
+                leave(run);
             }
             break;
 
@@ -75,8 +76,7 @@ run_action_t run_event(run_t *run, event_t event)
                 ui_dirty();
             }
             else if (event == EV_BACK) {
-                end_run(run);
-                to_title(run);
+                leave(run);
             }
             else {
                 return RUN_INPUT;
@@ -89,17 +89,17 @@ run_action_t run_event(run_t *run, event_t event)
                 ui_dirty();
             }
             else if (event == EV_BACK) {
-                end_run(run);
-                to_title(run);
+                leave(run);
             }
             break;
 
-        case RUN_CRASH:
-            break;
-
         case RUN_OVER:
-            if (event != EV_DOWN) {
-                to_title(run);
+            if (event == EV_SELECT) {
+                get_ready(run);
+                return RUN_START;
+            }
+            if (event == EV_BACK) {
+                shell_back();
             }
             break;
     }
@@ -109,16 +109,17 @@ run_action_t run_event(run_t *run, event_t event)
 bool run_tick(run_t *run)
 {
     switch (run->mode) {
+        case RUN_READY:
+            if (--run->ticks == 0) {
+                run->mode = RUN_PLAY;
+            }
+            ui_dirty();
+            break;
         case RUN_PLAY:
             return true;
         case RUN_CRASH:
             if (--run->ticks == 0) {
                 run_over(run);
-            }
-            break;
-        case RUN_OVER:
-            if (run->ticks && --run->ticks == 0) {
-                to_title(run);
             }
             break;
         default:
@@ -139,59 +140,33 @@ void run_suspend(run_t *run)
 // The screens every game shares
 // ---------------------------------------------------------------------------------------------
 
-// The best score with its unit, and " · NEW" when this run set it.
-static void best_text(char *out, const run_t *run, const char *unit, bool mark_new)
+// Over the field: the countdown while getting ready, the pause sign while paused.
+void run_draw_overlay(const run_t *run)
 {
-    char suffix[12] = "";
-    int  n          = 0;
-    for (; unit && *unit && n < 4; unit++) {
-        suffix[n++] = *unit;
+    if (run->mode == RUN_READY) {
+        char digit[2] = {(char) ('1' + (run->ticks - 1) * 3 / READY_TICKS), '\0'};
+        gfx_bubble(GFX_W / 2 - 14, 20, 28, 30, 2, false);
+        gfx_bubble(GFX_W / 2 - 12, 22, 24, 26, 2, true);
+        gfx_text_center(GFX_W / 2, 25, digit, 3, false);
     }
-    if (mark_new) {
-        const char *mark = " " G_DOT " NEW";
-        for (; *mark; mark++) {
-            suffix[n++] = *mark;
-        }
+    else if (run->mode == RUN_PAUSED) {
+        ui_pause_sign();
     }
-    suffix[n] = '\0';
-    ui_number(out, run->best, suffix);
 }
 
-void run_draw_title(const run_t *run, const char *name, const char *hint, const char *unit)
+// oops! / the score / a star and the best, with "new!" when this run set it.
+void run_draw_over(const run_t *run)
 {
     char line[16];
 
     ui_page();
-    ui_header(UI_HEADER, name);
-    gfx_text_center(GFX_W / 2, 14, name, 2, true);
-    best_text(line, run, unit, false);
-    gfx_text(28, 33, "BEST", 1, true);
-    gfx_text_right(100, 33, line, 1, true);
-    gfx_text_center(GFX_W / 2, 43, hint, 1, true);
-    ui_footer("BOTH:PLAY", "HOLD:BACK");
-}
-
-void run_draw_paused(void)
-{
-    gfx_fill_rect(14, 20, GFX_W - 28, 28, false);
-    gfx_rect(14, 20, GFX_W - 28, 28, true);
-    gfx_text_center(GFX_W / 2, 24, "PAUSED", 1, true);
-    gfx_text_center(GFX_W / 2, 33, "BOTH:RESUME", 1, true);
-    gfx_text_center(GFX_W / 2, 40, "HOLD:END RUN", 1, true);
-}
-
-void run_draw_over(const run_t *run, const char *name, const char *label, const char *unit)
-{
-    char line[16];
-
-    ui_page();
-    ui_header(UI_HEADER, name);
-    gfx_text_center(GFX_W / 2, 13, "GAME OVER", 2, true);
-    ui_number(line, run->score, unit);
-    gfx_text(16, 33, label, 1, true);
-    gfx_text_right(112, 33, line, 1, true);
-    gfx_text(16, 43, "BEST", 1, true);
-    best_text(line, run, unit, run->new_best);
-    gfx_text_right(112, 43, line, 1, true);
-    ui_footer("ANY KEY:TITLE", NULL);
+    gfx_text_center(GFX_W / 2, 4, "oops!", 2, true);
+    ui_number(line, run->score, NULL);
+    gfx_text_center(GFX_W / 2, 24, line, 3, true);
+    if (run->new_best) {
+        ui_bubble_text(GFX_W / 2, 51, G_STAR " new! " G_STAR, 1);
+    }
+    else {
+        ui_best(GFX_W / 2, 54, run->best);
+    }
 }

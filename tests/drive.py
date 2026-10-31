@@ -4,6 +4,7 @@ Used by scripts/emulate.sh and tests/test_arcade.py:
     from drive import Device
     d = Device()                # Speculos on localhost:5000
     d.click("right"); d.select(); d.hold(); d.shot("name")
+    d.has_bar()                 # a game is in play (its bar is on screen)
 """
 
 import io
@@ -52,23 +53,26 @@ class Device:
     def image(self):
         r = requests.get(f"{self.url}/screenshot")
         r.raise_for_status()
-        # Speculos draws lit pixels grey (221): threshold, do not dither.
-        return Image.open(io.BytesIO(r.content)).convert("L").point(lambda p: 255 if p > 64 else 0).convert("1")
+        # Speculos draws lit pixels grey (221): threshold, do not dither. The arcade draws dark ink
+        # on a lit screen, so the image is inverted: white here is ink.
+        return Image.open(io.BytesIO(r.content)).convert("L").point(lambda p: 0 if p > 64 else 255).convert("1")
 
     def pixels(self):
         """The screen, for comparing two moments."""
         return self.image().tobytes()
 
     def lit(self):
-        """How many pixels are lit."""
+        """How many pixels are inked."""
         return self.image().convert("L").histogram()[255]
 
-    def has_footer(self):
-        """The footer's perforated rule (y 54) is on screen: a menu, a title or a result, not play."""
+    def has_bar(self):
+        """The lace edge under the bar (y 8) is on screen: a game in play, not a menu or a result."""
         img = self.image()
-        return all(img.getpixel((x, 54)) for x in range(0, 128, 2)) and not any(
-            img.getpixel((x, 54)) for x in range(1, 128, 2)
-        )
+        return all(bool(img.getpixel((x, 8))) == (x % 4 == 0) for x in range(128))
+
+    def dots(self):
+        """The launcher's row of page dots (and whatever else is drawn there)."""
+        return self.image().crop((0, 53, 128, 60)).tobytes()
 
     def wait_for(self, predicate, timeout=30.0, step=0.1):
         end = time.time() + timeout
@@ -79,7 +83,8 @@ class Device:
         return False
 
     def shot(self, name, scale=4):
-        img = self.image()
+        """Saves the screen as the device shows it: dark ink on a lit screen."""
+        img = self.image().convert("L").point(lambda p: 255 - p)
         big = img.resize((img.width * scale, img.height * scale), Image.NEAREST)
         path = os.path.join(SHOTS, f"{name}.png")
         big.save(path)

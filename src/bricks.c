@@ -224,6 +224,7 @@ static void move_paddle(int direction)
 void bricks_enter(void)
 {
     run_enter(&run, BEST_BRICKS);
+    start_play();
 }
 
 void bricks_suspend(void)
@@ -279,16 +280,15 @@ static void draw_field(void)
 {
     char line[16];
 
-    ui_page();
-    ui_number(line, level, NULL);
-    int x = gfx_text(0, 0, "LEVEL ", 1, true);
-    x     = gfx_text(x, 0, line, 1, true);
-    for (int i = 1; i < balls; i++) {  // the balls in reserve
-        gfx_fill_rect(x + 2 + i * 5, 2, 3, 3, true);
+    // A heart per ball left, the score.
+    char hearts[BALLS + 1] = "";
+    for (int i = 0; i < balls; i++) {
+        hearts[i] = G_HEART[0];
     }
+    hearts[balls] = '\0';
     ui_number(line, run.score, NULL);
-    gfx_text_right(GFX_W, 0, line, 1, true);
-    ui_rule(8);
+    ui_page();
+    ui_bar(hearts, line);
 
     for (int r = 0; r < ROWS; r++) {
         for (int c = 0; c < COLS; c++) {
@@ -302,26 +302,21 @@ static void draw_field(void)
 
     if (serving && run.mode == RUN_PLAY) {
         ui_number(line, level, NULL);
-        x = (GFX_W - gfx_text_width("LEVEL ", 1) - gfx_text_width(line, 1)) / 2;
-        x = gfx_text(x, 42, "LEVEL ", 1, true);
-        gfx_text(x, 42, line, 1, true);
+        char banner[16] = "level ";
+        for (int i = 0; line[i]; i++) {
+            banner[6 + i]     = line[i];
+            banner[6 + i + 1] = '\0';
+        }
+        ui_bubble_text(GFX_W / 2, 40, banner, 1);
     }
 }
 
 void bricks_draw(void)
 {
-    switch (run.mode) {
-        case RUN_TITLE:
-            run_draw_title(&run, "BRICKS", "HOLD " G_LEFT " OR " G_RIGHT " TO MOVE", NULL);
-            break;
-        case RUN_OVER:
-            run_draw_over(&run, "BRICKS", "SCORE", NULL);
-            break;
-        default:
-            draw_field();
-            if (run.mode == RUN_PAUSED) {
-                run_draw_paused();
-            }
-            break;
+    if (run.mode == RUN_OVER) {
+        run_draw_over(&run);
+        return;
     }
+    draw_field();
+    run_draw_overlay(&run);
 }

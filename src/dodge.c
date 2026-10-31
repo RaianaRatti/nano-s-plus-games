@@ -7,7 +7,7 @@
 // The sizes and speeds are BadgeOS's, scaled from its 320 x 240 screen to 128 x 64. The world moves
 // once a tick (10 times a second); a press moves the ship at once, without waiting for the tick.
 //
-//   Play     hold LEFT or RIGHT to move. The rest (title, pause, game over) is run.c.
+//   Play     hold LEFT or RIGHT to move. The rest (countdown, pause, game over) is run.c.
 
 #include <string.h>
 
@@ -152,6 +152,7 @@ static void play_tick(void)
 void dodge_enter(void)
 {
     run_enter(&run, BEST_DODGE);
+    start_play();
 }
 
 void dodge_suspend(void)
@@ -187,10 +188,10 @@ void dodge_tick(void)
 static void draw_field(void)
 {
     char header[16];
-    ui_number(header, run.score, " S");
+    ui_number(header, run.score, NULL);
 
     ui_page();
-    ui_header("DODGE", header);
+    ui_bar(NULL, header);
     for (int i = 0; i < nb_blocks; i++) {
         int y = (int) (blocks[i].y / FP);
         int h = y + BLOCK_H > FIELD_BOTTOM ? FIELD_BOTTOM - y : BLOCK_H;
@@ -201,18 +202,10 @@ static void draw_field(void)
 
 void dodge_draw(void)
 {
-    switch (run.mode) {
-        case RUN_TITLE:
-            run_draw_title(&run, "DODGE", "HOLD " G_LEFT " OR " G_RIGHT " TO MOVE", " S");
-            break;
-        case RUN_OVER:
-            run_draw_over(&run, "DODGE", "SURVIVED", " S");
-            break;
-        default:
-            draw_field();
-            if (run.mode == RUN_PAUSED) {
-                run_draw_paused();
-            }
-            break;
+    if (run.mode == RUN_OVER) {
+        run_draw_over(&run);
+        return;
     }
+    draw_field();
+    run_draw_overlay(&run);
 }

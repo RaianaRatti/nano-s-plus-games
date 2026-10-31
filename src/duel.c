@@ -13,9 +13,8 @@
 // Who was first is exact: it is the order of the button events. The reaction time shown is
 // counted in ticks, so it is rounded to a tenth of a second.
 //
-//   Title    BOTH starts, HOLD goes back to the launcher.
-//   Playing  HOLD (both players, together) leaves the duel.
-//   Over     BOTH plays again, HOLD returns to the title.
+//   Playing  the duel starts as it opens. HOLD (both players, together) leaves it.
+//   Over     BOTH plays again, HOLD goes back to the launcher.
 
 #include <string.h>
 
@@ -33,7 +32,7 @@
 #define RIGHT 1
 #define NOBODY (-1)
 
-typedef enum { TITLE, ARMED, FLASH, ROUND_RESULT, OVER } duel_mode_t;
+typedef enum { ARMED, FLASH, ROUND_RESULT, OVER } duel_mode_t;
 
 typedef enum {
     WHY_FIRST,       // the winner pressed first after the flash
@@ -67,12 +66,6 @@ static void append_number(char *out, size_t size, uint32_t value)
     char digits[16];
     ui_number(digits, value, NULL);
     append(out, size, digits);
-}
-
-static void to_title(void)
-{
-    mode = TITLE;
-    ui_dirty();
 }
 
 static void next_round(void)
@@ -119,23 +112,17 @@ static void after_round(void)
 
 void duel_enter(void)
 {
-    to_title();
+    start_match();
 }
 
 void duel_event(event_t event, uint8_t buttons)
 {
     if (event == EV_BACK) {
-        if (mode == TITLE) {
-            shell_back();
-        }
-        else {
-            to_title();
-        }
+        shell_back();
         return;
     }
 
     switch (mode) {
-        case TITLE:
         case OVER:
             if (event == EV_SELECT) {
                 start_match();
@@ -200,70 +187,52 @@ void duel_tick(void)
 // Screens
 // ---------------------------------------------------------------------------------------------
 
-static const char *side(int8_t who)
+// Each player's side of the bar: their arrow and a heart per round won.
+static void match_bar(void)
 {
-    return who == LEFT ? "LEFT" : "RIGHT";
-}
-
-// The round in the header, the score in the footer, each player under their own button.
-static void match_frame(void)
-{
-    char round_text[16] = "ROUND ";
-    char left[16]       = G_LEFT " LEFT ";
-    char right[16]      = "";
-
-    append_number(round_text, sizeof(round_text), round_no);
-    append_number(left, sizeof(left), wins[LEFT]);
-    append_number(right, sizeof(right), wins[RIGHT]);
-    append(right, sizeof(right), " RIGHT " G_RIGHT);
+    char left[8]  = G_LEFT " ";
+    char right[8] = "";
+    for (uint8_t i = 0; i < wins[LEFT]; i++) {
+        append(left, sizeof(left), G_HEART);
+    }
+    for (uint8_t i = 0; i < wins[RIGHT]; i++) {
+        append(right, sizeof(right), G_HEART);
+    }
+    append(right, sizeof(right), " " G_RIGHT);
 
     ui_page();
-    ui_header(round_text, "BEST OF 3");
-    ui_footer(left, right);
+    ui_bar(left, right);
+}
+
+static const char *winner_text(int8_t who)
+{
+    return who == LEFT ? G_LEFT " wins" : "wins " G_RIGHT;
 }
 
 static void draw_result(void)
 {
     char line[24] = "";
 
-    match_frame();
-    gfx_text_center(GFX_W / 2, 13, winner == NOBODY ? "TIE" : side(winner), 2, true);
+    match_bar();
+    gfx_text_center(GFX_W / 2, 18, winner == NOBODY ? "tie!" : winner_text(winner), 2, true);
 
     switch (why) {
         case WHY_FIRST:
-            append(line, sizeof(line), "WINS THE ROUND");
-            break;
-        case WHY_EARLY:
-            append(line, sizeof(line), side(winner == LEFT ? RIGHT : LEFT));
-            append(line, sizeof(line), " WAS TOO EARLY");
-            break;
-        case WHY_BOTH_EARLY:
-            append(line, sizeof(line), "BOTH TOO EARLY");
-            break;
-        case WHY_SAME:
-            append(line, sizeof(line), "SAME INSTANT");
-            break;
-        case WHY_NOBODY:
-            append(line, sizeof(line), "NOBODY PRESSED");
-            break;
-    }
-    gfx_text_center(GFX_W / 2, 32, line, 1, true);
-
-    line[0] = '\0';
-    if (why == WHY_FIRST) {
-        if (reaction == 0) {
-            append(line, sizeof(line), "IN UNDER 0.1 S");
-        }
-        else {
-            append(line, sizeof(line), "IN ");
             append_number(line, sizeof(line), reaction / 10);
             append(line, sizeof(line), ".");
             append_number(line, sizeof(line), reaction % 10);
-            append(line, sizeof(line), " S");
-        }
-    }
-    else if (winner == NOBODY) {
-        append(line, sizeof(line), "PLAYED AGAIN");
+            append(line, sizeof(line), " s");
+            break;
+        case WHY_EARLY:
+        case WHY_BOTH_EARLY:
+            append(line, sizeof(line), "too early!");
+            break;
+        case WHY_SAME:
+            append(line, sizeof(line), "same time!");
+            break;
+        case WHY_NOBODY:
+            append(line, sizeof(line), "zzz...");
+            break;
     }
     gfx_text_center(GFX_W / 2, 42, line, 1, true);
 }
@@ -273,56 +242,30 @@ static void draw_over(void)
     char line[24] = "";
 
     ui_page();
-    ui_header(UI_HEADER, "DUEL");
-    if (wins[LEFT] >= NEED) {
-        gfx_text_center(GFX_W / 2, 13, "LEFT WINS", 2, true);
-    }
-    else if (wins[RIGHT] >= NEED) {
-        gfx_text_center(GFX_W / 2, 13, "RIGHT WINS", 2, true);
+    if (wins[LEFT] >= NEED || wins[RIGHT] >= NEED) {
+        gfx_text_center(GFX_W / 2, 8, wins[LEFT] >= NEED ? G_LEFT " wins!" : "wins! " G_RIGHT, 2, true);
     }
     else {
-        gfx_text_center(GFX_W / 2, 13, "DRAW", 2, true);
+        gfx_text_center(GFX_W / 2, 8, "draw", 2, true);
     }
-
-    append(line, sizeof(line), "LEFT ");
     append_number(line, sizeof(line), wins[LEFT]);
-    append(line, sizeof(line), " " G_DOT " ");
+    append(line, sizeof(line), " " G_HEART " ");
     append_number(line, sizeof(line), wins[RIGHT]);
-    append(line, sizeof(line), " RIGHT");
-    gfx_text_center(GFX_W / 2, 32, line, 1, true);
-
-    line[0] = '\0';
-    append(line, sizeof(line), "AFTER ");
-    append_number(line, sizeof(line), round_no);
-    append(line, sizeof(line), round_no == 1 ? " ROUND" : " ROUNDS");
-    gfx_text_center(GFX_W / 2, 42, line, 1, true);
-
-    ui_footer("BOTH:AGAIN", "HOLD:BACK");
+    gfx_text_center(GFX_W / 2, 34, line, 2, true);
 }
 
 void duel_draw(void)
 {
     switch (mode) {
-        case TITLE:
-            ui_page();
-            ui_header(UI_HEADER, "DUEL");
-            gfx_text_center(GFX_W / 2, 13, "DUEL", 2, true);
-            gfx_text_center(GFX_W / 2, 32, G_LEFT " LEFT  VS  RIGHT " G_RIGHT, 1, true);
-            gfx_text_center(GFX_W / 2, 42, "PRESS AT THE FLASH", 1, true);
-            ui_footer("BOTH:START", "HOLD:BACK");
-            break;
-
         case ARMED:
-            match_frame();
-            gfx_text_center(GFX_W / 2, 14, "WAIT...", 2, true);
-            gfx_text_center(GFX_W / 2, 33, "PRESS AT THE FLASH", 1, true);
-            gfx_text_center(GFX_W / 2, 43, "TOO EARLY LOSES", 1, true);
+            match_bar();
+            gfx_text_center(GFX_W / 2, 26, "wait...", 2, true);
             break;
 
         case FLASH:
-            // The flash: the whole screen lit, the words cut out of it.
+            // The flash: the whole screen inked, the word cut out of it.
             gfx_clear(true);
-            gfx_text_center(GFX_W / 2, 18, "PRESS!", 3, false);
+            gfx_text_center(GFX_W / 2, 22, "now!", 3, false);
             break;
 
         case ROUND_RESULT:

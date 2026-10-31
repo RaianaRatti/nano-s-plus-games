@@ -17,8 +17,8 @@
 
 #define DIE_MAX  22
 #define DIE_GAP  4
-#define DICE_Y   12
-#define AMOUNT_Y 38
+#define DICE_Y   6
+#define TOTAL_Y  36
 
 // Where each face puts its pips on a 3 x 3 grid: {column, row}, 1..3.
 static const uint8_t PIPS[SIDES][SIDES][2] = {
@@ -144,12 +144,12 @@ static void draw_die(int x, int y, int size, uint8_t face, bool faint)
     }
 }
 
+// The dice, and their total in big figures under them (a question mark before the first roll).
 void dice_draw(void)
 {
     char line[16];
 
     ui_page();
-    ui_header(UI_HEADER, "DICE");
 
     int size  = die_size();
     int width = count * size + (count - 1) * DIE_GAP;
@@ -158,25 +158,11 @@ void dice_draw(void)
         draw_die(x + i * (size + DIE_GAP), DICE_Y, size, faces[i], !settled && !rolling);
     }
 
-    // The total, as BadgeOS's amount: a label, the value, the unit.
-    int amount_y = DICE_Y + size + 4;
-    if (amount_y < AMOUNT_Y) {
-        amount_y = AMOUNT_Y;
-    }
-    gfx_text(0, amount_y + 4, "TOTAL", 1, true);
-    if (rolling) {
-        gfx_text_center(GFX_W / 2, amount_y, "..", 2, true);
-    }
-    else if (settled) {
+    if (settled) {
         ui_number(line, total, NULL);
-        gfx_text_center(GFX_W / 2, amount_y, line, 2, true);
+        gfx_text_center(GFX_W / 2, TOTAL_Y + 4, line, 3, true);
     }
-    else {
-        gfx_text_center(GFX_W / 2, amount_y, "--", 2, true);
+    else if (!rolling) {
+        gfx_text_center(GFX_W / 2, TOTAL_Y + 4, "?", 3, true);
     }
-    ui_number(line, count, count == 1 ? " DIE" : " DICE");
-    gfx_text_right(GFX_W, amount_y + 4, line, 1, true);
-
-    ui_footer(G_LEFT "-1", "+1" G_RIGHT);
-    gfx_text_center(GFX_W / 2, 57, "BOTH:ROLL", 1, true);
 }

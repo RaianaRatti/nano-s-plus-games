@@ -1,9 +1,7 @@
 // The shell: the launcher, and the switch that hands each event to the app on screen.
 //
-// The launcher is BadgeOS's "games" folder as a Nano carousel: LEFT and RIGHT turn through the
-// games, BOTH opens one, HOLD (or the last card, Quit) goes back to the Ledger dashboard.
-
-#include <string.h>
+// The launcher is a carousel of cards, a picture and a name each: LEFT and RIGHT turn through the
+// games, BOTH opens one, HOLD (or the last card, bye) goes back to the Ledger dashboard.
 
 #include "os.h"
 #include "main_std_app.h"
@@ -25,66 +23,36 @@ static const char *card_title(uint8_t i)
 {
     switch (APP_DODGE + i) {
         case APP_DODGE:
-            return "DODGE";
+            return "dodge";
         case APP_DICE:
-            return "DICE";
+            return "dice";
         case APP_DUEL:
-            return "DUEL";
+            return "duel";
         case APP_SNAKE:
-            return "SNAKE";
+            return "snake";
         case APP_PONG:
-            return "PONG";
+            return "pong";
         case APP_BRICKS:
-            return "BRICKS";
+            return "bricks";
         case APP_RACER:
-            return "RACER";
+            return "racer";
         case APP_CAVE:
-            return "CAVE";
+            return "cave";
         case APP_FLIP:
-            return "FLIP";
+            return "flip";
         case APP_RUNNER:
-            return "RUNNER";
+            return "runner";
         default:
-            return "QUIT";
+            return "bye!";
     }
 }
 
-static const char *card_line(uint8_t i)
+// The card's best score. Returns false for a card without one.
+static bool card_best(uint8_t i, best_t *slot)
 {
-    switch (APP_DODGE + i) {
-        case APP_DODGE:
-            return "DODGE THE BLOCKS";
-        case APP_DICE:
-            return "ROLL ONE TO FIVE DICE";
-        case APP_DUEL:
-            return "TWO PLAYER REFLEXES";
-        case APP_SNAKE:
-            return "EAT AND GROW";
-        case APP_PONG:
-            return "ONE OR TWO PLAYERS";
-        case APP_BRICKS:
-            return "BREAK EVERY BRICK";
-        case APP_RACER:
-            return "WEAVE THROUGH TRAFFIC";
-        case APP_CAVE:
-            return "FLY THROUGH THE CAVE";
-        case APP_FLIP:
-            return "FLIP THE GRAVITY";
-        case APP_RUNNER:
-            return "JUMP AND DUCK";
-        default:
-            return "BACK TO THE DASHBOARD";
-    }
-}
-
-// The card's best score: its slot and unit. Returns false for a card without one.
-static bool card_best(uint8_t i, best_t *slot, const char **unit)
-{
-    *unit = NULL;
     switch (APP_DODGE + i) {
         case APP_DODGE:
             *slot = BEST_DODGE;
-            *unit = " S";
             return true;
         case APP_SNAKE:
             *slot = BEST_SNAKE;
@@ -94,15 +62,12 @@ static bool card_best(uint8_t i, best_t *slot, const char **unit)
             return true;
         case APP_RACER:
             *slot = BEST_RACER;
-            *unit = " M";
             return true;
         case APP_CAVE:
             *slot = BEST_CAVE;
-            *unit = " M";
             return true;
         case APP_FLIP:
             *slot = BEST_FLIP;
-            *unit = " M";
             return true;
         case APP_RUNNER:
             *slot = BEST_RUNNER;
@@ -145,25 +110,25 @@ void launcher_event(event_t event, uint8_t buttons)
 
 void launcher_draw(void)
 {
-    char page[16];
-    ui_number(page, card + 1, "/");
-    ui_number(page + strlen(page), NB_CARDS, NULL);
-
     ui_page();
-    ui_header(UI_HEADER, page);
-    gfx_text(1, 21, G_LEFT, 1, true);
-    gfx_text_right(GFX_W - 1, 21, G_RIGHT, 1, true);
-    gfx_text_center(GFX_W / 2, 15, card_title(card), 2, true);
-    gfx_text_center(GFX_W / 2, 34, card_line(card), 1, true);
-    best_t      slot;
-    const char *unit;
-    if (card_best(card, &slot, &unit)) {
-        char best[16];
-        ui_number(best, storage_best(slot), unit);
-        gfx_text(28, 44, "BEST", 1, true);
-        gfx_text_right(100, 44, best, 1, true);
+
+    ui_icon(card, 6, 10, 2);
+    gfx_text_center(88, 15, card_title(card), 2, true);
+    best_t slot;
+    if (card_best(card, &slot)) {
+        ui_best(88, 36, storage_best(slot));
     }
-    ui_footer("BOTH:OPEN", "HOLD:QUIT");
+
+    // A dot per card, the current one bigger.
+    int x0 = GFX_W / 2 - (NB_CARDS - 1) * 3;
+    for (int i = 0; i < NB_CARDS; i++) {
+        if (i == card) {
+            gfx_bubble(x0 + i * 6 - 2, 54, 5, 5, 1, true);
+        }
+        else {
+            gfx_pixel(x0 + i * 6, 56, true);
+        }
+    }
 }
 
 // ---------------------------------------------------------------------------------------------

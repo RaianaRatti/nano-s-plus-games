@@ -1,0 +1,7 @@
+build/
+bin/
+debug/
+glyphs/home_arcade_14px.gif
+screenshots/
+.venv/
+__pycache__/

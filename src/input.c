@@ -15,10 +15,10 @@
 // The device's MCU sends the state of both buttons on each change (and repeats it while a button
 // is held): 1, 3, 1, 0 for "left down, right down, right up, left up". Speculos, the emulator,
 // sends only the button that went down, and 0 when any goes up: 1, 2, 0, 0. NBGL copes with both
-// by adding the buttons up until a 0; the arcade does the same for a new button, but still follows
+// by adding the buttons up until a 0; the core does the same for a new button, but still follows
 // the device when one of two is released, because a game must know which one is still held.
 
-#include "arcade.h"
+#include "core.h"
 
 static uint8_t mask;      // the buttons down now
 static uint8_t gesture;   // every button that went down since all were up

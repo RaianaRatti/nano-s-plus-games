@@ -1,0 +1,258 @@
+{
+  "_": "The pet's physics facts (tools/make_facts.py turns pet/facts/*.json into pet/src/facts.c). Each fact: a title for the bar (20 characters at most), the fact itself (what the pet says in its box: 5 lines of 20 characters) and 'more', the paragraphs that explain it from scratch. Only the screen's letters: ASCII, plus é and á.",
+  "facts": [
+    {
+      "title": "quantum dots",
+      "fact": "A quantum dot is a crystal so tiny that its size, not its material, sets its color.",
+      "more": [
+        "A quantum dot is a speck of semiconductor only a few nanometres across: a few thousand atoms. That is so small that the electrons inside feel the walls of the crystal around them.",
+        "In quantum physics, an electron trapped in a small space can only have certain energies, like a guitar string that can only play certain notes. The smaller the space, the further apart those energies are.",
+        "When an electron drops from a higher energy to a lower one, it gives off light, and the color depends on the size of the drop. So a small dot glows blue, and a bigger dot of the very same material glows red.",
+        "Quantum dots are used in QLED TV screens and to make cells glow under a microscope. Discovering and making them won the 2023 Nobel Prize in Chemistry."
+      ]
+    },
+    {
+      "title": "quantum tunneling",
+      "fact": "Particles can pass straight through walls they don't have the energy to climb over.",
+      "more": [
+        "Throw a ball at a wall without enough speed to get over it, and it bounces back. Every time. But an electron is not quite a ball: quantum physics describes it with a wave that says where it is likely to be found.",
+        "That wave does not stop dead at a barrier. It fades away inside it, and if the barrier is thin enough, a little of it is still there on the far side. So there is a small chance that the particle simply turns up on the other side, without ever having had the energy to go over. This is tunneling.",
+        "It is not rare in practice. The flash memory in phones and USB sticks stores bits by tunneling electrons through a thin insulating layer, and some radioactive atoms decay by letting a piece of their nucleus tunnel out."
+      ]
+    },
+    {
+      "title": "the double slit",
+      "fact": "Fire electrons one at a time at two slits, and each one interferes with itself.",
+      "more": [
+        "Send water waves through two gaps and they spread out and overlap. Where crest meets crest they add up, where crest meets trough they cancel, and you get a striped pattern. That is interference, the signature of waves.",
+        "Now fire electrons at a screen through two narrow slits, so slowly that only one is in flight at a time. Each arrives as a single dot, like a particle. But after thousands of dots, the stripes of interference appear.",
+        "Each electron, alone, travelled as a wave that went through both slits and interfered with itself, then landed in one spot. Put a detector at the slits to see which one it takes, and the stripes vanish. Richard Feynman said this experiment holds the only real mystery of quantum mechanics."
+      ]
+    },
+    {
+      "title": "superposition",
+      "fact": "A quantum object can be in a mix of two states at once, until something measures it.",
+      "more": [
+        "A spinning coin is heads or tails, even if you don't know which yet. A quantum system is different: it can be in a superposition, a precise blend of both possibilities, and that blend is real, not just our ignorance.",
+        "We know it is real because the possibilities can interfere with each other, adding up or cancelling out, which a hidden 'it was heads all along' could never do.",
+        "When you measure it, you always get one clean answer, heads or tails, with odds set by the blend. Why measuring does this is still argued about. It is called the measurement problem, and there are many rival interpretations of quantum mechanics that try to explain it."
+      ]
+    },
+    {
+      "title": "entanglement",
+      "fact": "Entangled particles stay linked: measure one and you instantly know the other, however far.",
+      "more": [
+        "Two particles can be made so that they don't each have a state of their own, only a shared one. For example, a pair whose spins must point opposite ways, though neither has picked a direction yet.",
+        "Measure one and find, say, up. At that instant you know the other is down, even if it is on the far side of the galaxy. Einstein called this 'spooky action at a distance' and suspected that the particles had secretly decided all along.",
+        "Experiments say they hadn't (see Bell's theorem). But you can't use entanglement to send a message: each result on its own looks perfectly random, and the pattern only shows when the two sides compare notes, by ordinary, slower-than-light means."
+      ]
+    },
+    {
+      "title": "bell's theorem",
+      "fact": "Experiments show nature can't be explained by particles carrying hidden instructions.",
+      "more": [
+        "Maybe entangled particles are like a pair of gloves in two boxes: open one, find a left glove, and of course the other is right. Nothing spooky, the answer was there from the start. Einstein hoped quantum physics worked like that, with 'hidden variables' we just can't see.",
+        "In 1964, John Bell found a way to test it. If the answers are carried along from the start, then the results of measuring pairs at different angles can only agree so often. Quantum physics predicts that they agree more often than that.",
+        "Experiments by John Clauser, Alain Aspect, Anton Zeilinger and others found the quantum prediction again and again, and in 2015 with the last big loopholes closed. They won the 2022 Nobel Prize. Nature is not like gloves in boxes."
+      ]
+    },
+    {
+      "title": "uncertainty",
+      "fact": "No particle can have an exact position and an exact speed at once, even in principle.",
+      "more": [
+        "Heisenberg's uncertainty principle is often explained as 'looking at an electron knocks it'. That happens, but it is not the real reason. The real reason is that a particle is described by a wave.",
+        "A wave squeezed into a tiny spot must be built from many wavelengths mixed together, and in quantum physics, wavelength is momentum: mass times speed. So a sharp position means a blurry momentum. And a wave with one clean wavelength, a sharp momentum, has to spread out over a long stretch: a blurry position.",
+        "The trade-off is set by Planck's constant, which is tiny, so you never notice it with a ball. For an electron in an atom it is everything: it is what stops the electron from falling into the nucleus."
+      ]
+    },
+    {
+      "title": "pauli exclusion",
+      "fact": "No two electrons can share the same state. That's why you don't sink through the floor.",
+      "more": [
+        "Electrons belong to a family of particles called fermions, which obey Pauli's exclusion principle: no two of them in the same place can be in exactly the same quantum state.",
+        "So in an atom they can't all pile into the lowest energy level. They fill the levels in turn, from the bottom up, and the way the outer ones are left is what gives each element its chemistry. Without it, there would be no periodic table.",
+        "It also makes matter stiff. Push two atoms together and their electrons would have to share states, which they can't. Along with the push of their charges, that is why solids take up space, and why your hand doesn't pass through a table."
+      ]
+    },
+    {
+      "title": "spin",
+      "fact": "Turn an electron a full circle and it is not back where it started. It takes two turns.",
+      "more": [
+        "Electrons have spin: they act like tiny magnets, as if they were spinning, although they are points and nothing is actually turning. Spin is a quantum property with no everyday twin.",
+        "One strange thing about it: rotate an electron's state by a full 360 degrees and its wave comes back with its sign flipped, minus where it was plus. Only after 720 degrees is it truly the same again.",
+        "A flipped sign sounds invisible, but interference can reveal it. In 1975, experiments split beams of neutrons, which have the same kind of spin, turned one beam a full circle with a magnetic field, and saw the two beams cancel where they used to add up."
+      ]
+    },
+    {
+      "title": "zero-point energy",
+      "fact": "Nothing can ever be perfectly still. Even at absolute zero, atoms still jiggle.",
+      "more": [
+        "Cool something down and its atoms move less and less. You might expect that at absolute zero, minus 273.15 degrees Celsius, they would stop completely.",
+        "Quantum physics says they can't. An atom sitting perfectly still in a perfectly known place would break the uncertainty principle. So even at its lowest possible energy it keeps a restless motion, called zero-point energy.",
+        "Helium shows it best. Its atoms are so light and attract each other so weakly that this jiggling alone keeps it liquid. At normal pressure, helium never freezes, however cold you make it. You have to squeeze it to about 25 times air pressure."
+      ]
+    },
+    {
+      "title": "the casimir effect",
+      "fact": "Two metal plates in perfect emptiness are pushed together by the vacuum itself.",
+      "more": [
+        "In quantum physics, empty space is not quite empty. The electromagnetic field in it keeps tiny fluctuations even with no light at all, a bit like the jiggling of atoms at absolute zero.",
+        "Put two metal plates very close together, and between them only the fluctuations that fit the gap can exist, while outside, all of them can. The difference pushes the plates together.",
+        "Hendrik Casimir predicted it in 1948, and it was measured precisely in 1997. It is far too weak to notice at everyday sizes, but with a gap of ten nanometres it is about as strong as air pressure: enough to make the parts of tiny machines stick together."
+      ]
+    },
+    {
+      "title": "the zeno effect",
+      "fact": "Watch an unstable quantum system often enough, and you can stop it from changing.",
+      "more": [
+        "A quantum system that is changing, say an atom about to jump from one state to another, does it smoothly at first: its chance of having jumped grows very slowly at the start.",
+        "Each measurement resets it: you find that it has jumped or not, and if not, it starts again from the slow beginning. Measure it again and again, quickly, and it hardly ever gets the chance to jump.",
+        "It is named after Zeno's paradox of the arrow that can never move. It was seen in 1990 with trapped ions, whose change between two states was slowed by flashing them with laser pulses. In the quantum world, a watched pot really never boils."
+      ]
+    },
+    {
+      "title": "bose-einstein gas",
+      "fact": "Cool atoms close to absolute zero, and thousands of them merge into a single quantum wave.",
+      "more": [
+        "Every atom is also a wave, and the colder it is, the longer that wave. At room temperature the wave is far smaller than the atom. But a few billionths of a degree above absolute zero, it grows larger than the gaps between the atoms.",
+        "Then, for atoms of the right kind (bosons), something remarkable happens. The waves overlap and lock together, and thousands or millions of atoms fall into the very same state, behaving as one giant atom you can almost see.",
+        "Satyendra Nath Bose and Einstein predicted it in 1924. It took until 1995 to cool a gas enough to make one, which won the 2001 Nobel Prize. The atoms in it move so perfectly in step that two of these condensates interfere like waves of light."
+      ]
+    },
+    {
+      "title": "superfluids",
+      "fact": "Superfluid helium flows with no friction. It can creep up the walls and out of its cup.",
+      "more": [
+        "Below about minus 271 degrees Celsius, liquid helium turns into a superfluid. Part of it acts as a single quantum state, a bit like a Bose-Einstein condensate, and a single state has nothing to rub against: it flows with no viscosity at all.",
+        "So it leaks through cracks too fine for any gas. Put it in a cup, and a film about a hundred atoms thick creeps up the inside wall, over the rim and down the outside, until the cup is empty.",
+        "Spin a bucket of it and the superfluid doesn't simply turn along. It fills with tiny whirlpools, each carrying exactly the same amount of swirl, because in a quantum fluid even swirling comes in fixed steps."
+      ]
+    },
+    {
+      "title": "superconductors",
+      "fact": "In a superconductor, a current meets zero resistance and can circle for years.",
+      "more": [
+        "In an ordinary wire, electrons bump into the vibrating atoms of the metal and lose energy as heat. That is resistance. Cool some materials enough, and it vanishes: not just small, but zero.",
+        "The trick is that the electrons pair up. Each one pulls slightly on the atoms around it, and that dent attracts another electron. These Cooper pairs act like bosons and all fall into one shared quantum state, which moves as a whole and can't be slowed down a little at a time.",
+        "Currents started in superconducting rings have kept flowing for years with no measurable loss. Superconducting coils make the strong magnets in MRI scanners and in particle accelerators like the LHC."
+      ]
+    },
+    {
+      "title": "quantum levitation",
+      "fact": "A superconductor can lock itself in midair above a magnet, even upside down.",
+      "more": [
+        "Superconductors push magnetic fields out of themselves. This is the Meissner effect, and it is enough to make a magnet float above a cold superconductor.",
+        "In many superconductors, though, thin threads of magnetic field are let through at tiny defects, each thread carrying exactly one quantum of magnetism. The material then grips the threads where they are. This is called flux pinning.",
+        "So a superconductor over a magnet doesn't just float: it stays at whatever height and tilt you put it, as if stuck in invisible foam, and it can even hang under the magnet. Set it on a circular track of magnets, and it glides around without ever falling off."
+      ]
+    },
+    {
+      "title": "quantum hall effect",
+      "fact": "Cold electrons in a magnet show a resistance set only by nature's constants.",
+      "more": [
+        "Electrons moving through a flat sheet in a strong magnetic field are pushed sideways, which builds up a voltage across the sheet. That is the Hall effect, known since 1879.",
+        "In 1980, Klaus von Klitzing cooled such a sheet close to absolute zero and found that its sideways resistance did not change smoothly with the field. It stood on flat steps, at a natural value divided by exactly 1, 2, 3 and so on, the same in every sample, whatever its size or impurities.",
+        "That value is Planck's constant divided by the square of the electron's charge: about 25,813 ohms. It is now how the world defines the ohm. It is so exact because the electrons' paths depend on the overall shape of their quantum states, a property called topology."
+      ]
+    },
+    {
+      "title": "the josephson effect",
+      "fact": "A superconducting sandwich turns a voltage into a precise frequency. It defines the volt.",
+      "more": [
+        "Put a thin insulating layer between two superconductors, and the paired electrons tunnel through it as a current, with no voltage at all. Brian Josephson predicted it in 1962, as a student, and won a Nobel Prize for it.",
+        "Add a voltage and the current starts to oscillate, at a frequency set only by that voltage and natural constants: about 484 billion cycles per second for each millivolt. Frequencies can be measured extremely precisely, so this is how the volt is defined and checked.",
+        "Rings with such junctions, called SQUIDs, are the most sensitive magnetic detectors known. They can pick up the faint magnetic fields made by the electric currents in a person's brain."
+      ]
+    },
+    {
+      "title": "lasers",
+      "fact": "A laser works because light can make an atom give off a perfect copy of that same light.",
+      "more": [
+        "An atom with extra energy can drop to a lower energy and give off a photon, a particle of light, on its own. But in 1917 Einstein realized that a passing photon can also trigger the drop. The new photon is then an exact twin of the one that triggered it: same color, same direction, in step.",
+        "That is stimulated emission. In a laser, most of the atoms are pumped up to the higher energy, and mirrors bounce the light back and forth through them. Each photon makes twins, which make more twins, and an avalanche of identical light builds up.",
+        "Laser stands for light amplification by stimulated emission of radiation. Because its light is all in step, it can be focused to a tiny spot, read the bumps on a disc, and travel to the Moon and back."
+      ]
+    },
+    {
+      "title": "quantum computers",
+      "fact": "A quantum computer doesn't try every answer at once. It makes the wrong answers cancel out.",
+      "more": [
+        "A bit is 0 or 1. A qubit can be in a superposition of both, and a few hundred qubits together can be in a blend of more combinations than there are atoms in the universe.",
+        "It's tempting to say that a quantum computer tries them all in parallel. But reading it out gives you just one random combination, and the rest are lost. Trying everything is useless if you can only see one result.",
+        "The real trick is interference. A quantum algorithm is choreographed so that the paths leading to wrong answers cancel out, like waves meeting crest to trough, while the paths to the right answer add up. That only works for some problems, like factoring huge numbers or simulating molecules, so quantum computers won't replace ordinary ones."
+      ]
+    },
+    {
+      "title": "no-cloning",
+      "fact": "It is impossible to copy an unknown quantum state. The laws of physics forbid it.",
+      "more": [
+        "You can copy a computer file as often as you like. But in 1982, physicists proved that no machine, however clever, can take an unknown quantum state and turn out two perfect copies of it.",
+        "Measuring a state to learn it disturbs it, and the rules of quantum physics don't allow any copier that works for every possible input.",
+        "That is the basis of quantum cryptography. If a secret key is sent as single photons, a spy can't copy them to read later. Any attempt to look disturbs them, the two people talking can notice the disturbance, and they throw that key away."
+      ]
+    },
+    {
+      "title": "teleportation",
+      "fact": "Teleportation is real: it moves a quantum state, not matter, and never faster than light.",
+      "more": [
+        "Quantum teleportation transfers the exact quantum state of one particle onto another particle somewhere else. It needs an entangled pair, shared between the sender and the receiver beforehand.",
+        "The sender measures the particle together with their half of the pair, which destroys its original state, so nothing is ever copied. That gives two ordinary bits, which are sent by any normal means. The receiver uses the bits to adjust the other half of the pair, which then takes on the original state.",
+        "Without those bits, the receiver's particle is just noise, so the state can't arrive before the message does. Photons' states have been teleported over 1,400 kilometres, between the ground and the Chinese satellite Micius, in 2017."
+      ]
+    },
+    {
+      "title": "decoherence",
+      "fact": "Big things don't act quantum because the world around them is always measuring them.",
+      "more": [
+        "If an electron can be in two places at once, why not a cat? The best answer physics has is decoherence.",
+        "A superposition only shows while its possibilities can interfere. But a cat is hit by air molecules, light and heat every instant, and each collision records where it is. The information leaks into the surroundings, and the interference becomes impossible to see, in far less than a trillionth of a second.",
+        "That is why quantum computers must be kept so cold and isolated: they are fighting decoherence. Experiments have pushed the limit up to molecules of about 2,000 atoms, which have been sent through two slits at once and interfered with themselves."
+      ]
+    },
+    {
+      "title": "seeing atoms",
+      "fact": "A needle with a single atom at its tip can feel and even move single atoms, by tunneling.",
+      "more": [
+        "Atoms are far too small to see with light, whose waves are thousands of times bigger. The scanning tunneling microscope, invented in 1981, finds them by touch instead.",
+        "A metal needle, so sharp it ends in a single atom, is brought within a nanometre of a surface. Electrons tunnel across the gap, and the current changes enormously with distance: about tenfold for every tenth of a nanometre. Scanning the needle while keeping the current steady traces the bumps of the individual atoms.",
+        "The needle can also pick atoms up and set them down. In 1989, IBM researchers spelled the company's name with 35 xenon atoms, and later made a short film, A Boy and His Atom, by moving single atoms around."
+      ]
+    },
+    {
+      "title": "fractional charge",
+      "fact": "Electrons can team up into 'particles' that carry a third of an electron's charge.",
+      "more": [
+        "The electron's charge was thought to be the smallest piece of charge that can move around freely. Quarks have thirds, but they are always locked inside protons and neutrons.",
+        "In 1982, in a flat sheet of electrons in a strong magnetic field and extreme cold, experiments found quantum Hall steps at fractions such as one third. The electrons were moving together so that the ripples in them, called quasiparticles, behaved like particles with exactly a third of an electron's charge.",
+        "No electron is broken: the dance as a whole carries the charge. These quasiparticles, called anyons, are neither fermions nor bosons, and some kinds of anyons may one day make quantum computers that resist errors."
+      ]
+    },
+    {
+      "title": "phonons",
+      "fact": "Sound in a crystal comes in little packets, the way light comes in photons.",
+      "more": [
+        "The atoms of a crystal are linked like balls on springs, so vibrations ripple through it as waves. Heat in a solid is mostly this jiggling, and sound is a slower, more orderly version of it.",
+        "Quantum physics says those vibrations can't have any energy they like: they come in packets, called phonons. Physicists treat phonons as particles that are born, travel, bounce off each other and disappear.",
+        "Phonons explain why diamond carries heat so well and glass so poorly. They help electrons pair up in superconductors. And today, single phonons can be made and detected in tiny devices, and used to carry quantum information."
+      ]
+    },
+    {
+      "title": "every path at once",
+      "fact": "In quantum physics, light gets from A to B by taking every possible path at once.",
+      "more": [
+        "Light bouncing off a mirror seems to take the quickest route: angle in equals angle out. Richard Feynman found a deeper way to see it. A photon explores every possible path, even wild ones, and each path gets a little arrow whose direction depends on how long that path takes.",
+        "Add up all the arrows. Far from the usual route, neighbouring paths have arrows pointing every which way, and they cancel out. Near the quickest path, the arrows point alike and add up. That is why light seems to take that path.",
+        "You can test it. Scrape away parts of a mirror far from the reflection point, in stripes, so that only arrows pointing one way are left, and light does reflect from there, at strange angles. That is how a diffraction grating, like the rainbow surface of a CD, works."
+      ]
+    },
+    {
+      "title": "giant atoms",
+      "fact": "An atom can be puffed up until it is wider than a human hair.",
+      "more": [
+        "Give an atom's outer electron more and more energy, without quite setting it free, and it moves to orbits farther and farther out. The atom's width grows with the square of the energy level's number.",
+        "These are Rydberg atoms. With the electron at level 100, an atom is ten thousand times wider than normal, about the size of a bacterium. In the thin gas between stars, astronomers have detected atoms at levels near 1,000: about a tenth of a millimetre across.",
+        "Such atoms are fragile, but they react strongly to electric fields and to each other, even far apart. That makes them useful as qubits in some quantum computers, and as sensors that can pick up radio signals."
+      ]
+    }
+  ]
+}

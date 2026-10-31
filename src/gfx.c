@@ -6,7 +6,7 @@
 // format, so showing a frame is one draw of the image: a column is 8 bytes, pixel (x, y) is bit
 // (7 - y % 8) of byte (127 - x) * 8 + y / 8.
 //
-// A set bit is lit. The arcade has a light theme: it draws dark ink on a lit screen, so "on" (ink)
+// A set bit is lit. The apps have a light theme: they draw dark ink on a lit screen, so "on" (ink)
 // is a clear bit and the blank page is all lit. Everything is drawn through gfx_pixel() and
 // gfx_clear(), which are the only places that know.
 
@@ -16,7 +16,7 @@
 #include "nbgl_obj.h"
 #include "nbgl_screen.h"
 
-#include "arcade.h"
+#include "core.h"
 
 static uint8_t             fb[GFX_W * GFX_H / 8];
 static nbgl_icon_details_t fb_icon;
@@ -222,11 +222,13 @@ static const uint8_t GLYPHS[][FONT_W] = {
     {0x00, 0x00, 0x08, 0x00, 0x00},  // G_DOT
     {0x0C, 0x1E, 0x3C, 0x1E, 0x0C},  // G_HEART
     {0x24, 0x1C, 0x0F, 0x1C, 0x24},  // G_STAR
+    {0x38, 0x54, 0x56, 0x55, 0x18},  // G_E_ACUTE
+    {0x20, 0x54, 0x56, 0x55, 0x78},  // G_A_ACUTE
 };
 
 static const uint8_t *glyph(char c)
 {
-    if (c >= 1 && c <= 5) {
+    if (c >= 1 && c <= 7) {
         return GLYPHS[c - 1];
     }
     if (c >= 'a' && c <= 'z') {

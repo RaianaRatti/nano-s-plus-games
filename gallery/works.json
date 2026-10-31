@@ -1,0 +1,230 @@
+{
+  "_": "The works in the gallery, in order. tools/make_gallery.py turns this into gallery/src/works.c. Each work: the Commons file of its picture, a short title for the bar, the 'about' page (title, then the other lines), the story, and its views. A view is a box in fractions of the picture (x0, y0, x1, y1), rendered by 'dither' (tones) or 'threshold' (shapes), with optional blur (screen pixels), gamma and threshold. The first view is the whole work: on the card, and as the first page, as big as the screen allows. The others are details, fitted to the screen in their own proportions, or filling it with 'fill'.",
+  "works": [
+    {
+      "key": "andersen2",
+      "file": "File:Andersen, Hans Christian, Seiltänzerinnen, Scherenschnitt.jpg",
+      "short": "dancers",
+      "title": "Tightrope Dancers",
+      "about": [
+        "Hans Christian",
+        "Andersen (1805-1875)",
+        "undated, paper cut",
+        "Odense"
+      ],
+      "story": "Hans Christian Andersen, who wrote The Little Mermaid and The Ugly Duckling, also made art with scissors. When he told a story to a room of children, he cut a folded sheet of paper as he talked, and at the end of the tale he unfolded it and gave it away. He made at least a thousand paper cuts. About 400 survive, most of them in Odense, the town where he was born.",
+      "views": [
+        {"box": [0, 0, 1, 1], "mode": "threshold"}
+      ]
+    },
+    {
+      "key": "hooke",
+      "file": "File:HookeFlea01.jpg",
+      "short": "the flea",
+      "title": "Of a Flea, from Micrographia",
+      "about": [
+        "Robert Hooke",
+        "(1635-1703)",
+        "1665, engraving"
+      ],
+      "story": "In 1665 Robert Hooke showed the world what he saw through his microscope. Micrographia was the first major book of the Royal Society and the first scientific best-seller. Its plates of insects fold out larger than the big book itself, and it gave biology the word cell. Samuel Pepys called it \"the most ingenious book that ever I read in my life\".",
+      "views": [
+        {"box": [0, 0, 1, 1], "blur": 0.3},
+        {"box": [0, 0.05, 1, 0.95], "blur": 0.3, "fill": true}
+      ]
+    },
+    {
+      "key": "afklint",
+      "file": "File:Hilma af Klint - Group IX SUW, The Swan No. 1 (13947).jpg",
+      "short": "the swan",
+      "title": "The Swan, No. 1",
+      "about": [
+        "Hilma af Klint",
+        "(1862-1944)",
+        "1915, oil on canvas"
+      ],
+      "story": "Hilma af Klint was a respected Stockholm painter of landscapes and portraits. In private she painted something else. With four friends, The Five, she held seances, and she said spirits she called the High Masters asked her for paintings for a Temple. From 1906 to 1915 she made 196 of them, many abstract, before Kandinsky. Sure the world was not ready, she directed that they stay unseen until twenty years after her death. Her pictures often pair opposites: here a white swan and a black one meet.",
+      "views": [
+        {"box": [0, 0, 1, 1], "gamma": 1.1},
+        {"box": [0.1, 0.2, 0.9, 0.8], "mode": "threshold", "blur": 0.4}
+      ]
+    },
+    {
+      "key": "atkins2",
+      "file": "File:Anna Atkins algae cyanotype.jpg",
+      "short": "algae",
+      "title": "Dictyota dichotoma",
+      "about": [
+        "Anna Atkins",
+        "(1799-1871)",
+        "1843, cyanotype"
+      ],
+      "story": "In 1842 the astronomer John Herschel, a friend of the family, invented the cyanotype: paper that turns deep blue in the sun. Within a year Anna Atkins was laying dried seaweed straight onto it, and where the plant lay, the paper stayed white. In October 1843 she published the first part of Photographs of British Algae, often called the first book illustrated with photographs, with handwritten text. Only 17 copies are known.",
+      "views": [
+        {"box": [0.02, 0.01, 0.98, 0.99]},
+        {"box": [0.1, 0.3, 0.95, 0.85]}
+      ]
+    },
+    {
+      "key": "kuniyoshi",
+      "file": "File:Takiyasha the Witch and the Skeleton Spectre.jpg",
+      "short": "the skeleton",
+      "title": "Takiyasha the Witch and the Skeleton Spectre",
+      "about": [
+        "Utagawa Kuniyoshi",
+        "(1798-1861)",
+        "c. 1844, woodblock"
+      ],
+      "story": "Princess Takiyasha, daughter of the rebel lord Taira no Masakado, reads a spell from a scroll. A skeleton rears out of the dark and crashes through the palace blinds to frighten Mitsukuni, the emperor's man. In the old tale she summons many life-sized skeletons. Kuniyoshi made it one giant across three sheets. A century later the giant skeleton ghost of Japanese comics, the gashadokuro, was drawn from this print.",
+      "views": [
+        {"box": [0.36, 0, 1, 0.75], "mode": "threshold", "blur": 0.6, "threshold": 0.62}
+      ]
+    },
+    {
+      "key": "delany",
+      "file": "File:Passiflora laurifolia by Mary Delany.jpg",
+      "short": "passionflower",
+      "title": "Passiflora laurifolia",
+      "about": [
+        "Mary Delany",
+        "(1700-1788)",
+        "1777, paper collage"
+      ],
+      "story": "Mary Delany was 71, and a widow for the second time, when she began cutting flowers out of coloured paper. Petal by petal she glued them onto black, botanically accurate, and friends sent her flowers to cut. She called them her paper mosaicks and made 985 of them, until her eyesight failed at 88. They are now in the British Museum.",
+      "views": [
+        {"box": [0, 0, 1, 0.95], "mode": "threshold", "gamma": 0.5, "threshold": 0.3},
+        {"box": [0.1, 0.3, 0.9, 0.75], "mode": "threshold", "gamma": 0.5, "threshold": 0.3}
+      ]
+    },
+    {
+      "key": "redon",
+      "file": "File:To Edgar Poe (The Eye, Like a Strange Balloon, Mounts toward Infinity) (A Edgar Poe (L'oeil, comme un ballon bizarre se dirige vers l'infini)) LACMA AC1997.14.1.1.jpg",
+      "short": "the eye",
+      "title": "The Eye, Like a Strange Balloon, Mounts Toward Infinity",
+      "about": [
+        "Odilon Redon",
+        "(1840-1916)",
+        "1882, lithograph"
+      ],
+      "story": "For years Odilon Redon worked almost only in black: charcoal drawings and lithographs he called his noirs, full of eyes, floating heads and spiders with human faces. Few noticed until 1884, when Huysmans' cult novel Against Nature gave its hero a collection of them. This is the first plate of an album dedicated to Edgar Allan Poe. In the 1890s Redon turned to colour, and after 1900 he made no more noirs.",
+      "views": [
+        {"box": [0.03, 0.02, 0.97, 0.96], "blur": 0.3},
+        {"box": [0.05, 0.05, 0.95, 0.6], "blur": 0.3}
+      ]
+    },
+    {
+      "key": "merian",
+      "file": "File:Avicularia-avicularia.jpg",
+      "short": "the spider",
+      "title": "Spiders, ants and a hummingbird",
+      "about": [
+        "Maria Sibylla Merian",
+        "(1647-1717)",
+        "1705, engraving,",
+        "coloured by hand"
+      ],
+      "story": "In 1699, at 52, Maria Sibylla Merian sold 255 of her paintings and sailed from Amsterdam to Suriname with her daughter Dorothea, to study insects where they live. Her book of 1705 showed them at every stage of life, when many still believed insects were born from mud. One plate shows a huge spider eating a hummingbird. It is why such tarantulas are still called bird-eating spiders, though they rarely eat birds.",
+      "views": [
+        {"box": [0, 0, 1, 1], "mode": "threshold", "blur": 0.3, "threshold": 0.75},
+        {"box": [0.02, 0.04, 0.34, 0.33], "mode": "threshold", "blur": 0.3, "threshold": 0.75}
+      ]
+    },
+    {
+      "key": "vallotton",
+      "file": "File:Félix Vallotton, La paresse (Laziness), 1896, NGA 69505.jpg",
+      "short": "laziness",
+      "title": "Laziness (La Paresse)",
+      "about": [
+        "Félix Vallotton",
+        "(1865-1925)",
+        "1896, woodcut"
+      ],
+      "story": "Félix Vallotton, a Swiss painter in Paris, saw the Japanese prints at the 1889 World's Fair, Hokusai's above all, and they changed his work. His woodcuts are broad masses of black and white with almost no detail: he made a precise drawing, then simplified, and simplified again. A critic called it the renaissance of the woodcut. Here a woman stretches across a patterned bed toward a cat.",
+      "views": [
+        {"box": [0.155, 0.135, 0.84, 0.82], "mode": "threshold", "blur": 0.3},
+        {"box": [0.16, 0.14, 0.84, 0.62], "mode": "threshold", "blur": 0.3}
+      ]
+    },
+    {
+      "key": "oi",
+      "file": "File:Yoshiwara Kōshisaki no zu by Katsushika Ōi.jpg",
+      "short": "night scene",
+      "title": "Night Scene in the Yoshiwara",
+      "about": [
+        "Katsushika Oi",
+        "(c. 1800-c. 1866)",
+        "c. 1818-1844,",
+        "colour on paper"
+      ],
+      "story": "Oi was the daughter of Hokusai. She married a painter, laughed at his work, the story goes, and left him after three years to paint beside her father in their famously untidy home. She was known for her pictures of beautiful women. Here, in the dark, visitors gather at the lattice of the pleasure quarter, where courtesans sit in the light. She hid her name in the lanterns: three of them carry O, i and Ei.",
+      "views": [
+        {"box": [0, 0, 1, 1], "mode": "threshold", "blur": 0.4, "threshold": 0.35},
+        {"box": [0, 0, 0.75, 0.75], "mode": "threshold", "blur": 0.35, "threshold": 0.33}
+      ]
+    },
+    {
+      "key": "runge",
+      "file": "File:Runge, Philipp Otto, Lilie und Levkoje, Scherenschnitt, Ausschnitt, Lilie.jpg",
+      "short": "lily",
+      "title": "Lily, from Lily and Stock",
+      "about": [
+        "Philipp Otto Runge",
+        "(1777-1810)",
+        "1804-1806, paper cut"
+      ],
+      "story": "Philipp Otto Runge was a sickly child who often missed school, and his mother taught him to cut silhouettes. He cut flowers and animals from white paper all his life. He became, with Caspar David Friedrich, a leading painter of German Romanticism, imagined all colours as a sphere, and wrote down two folk tales the Brothers Grimm later printed, among them The Fisherman and His Wife. He died of tuberculosis at 33.",
+      "views": [
+        {"box": [0, 0, 1, 1], "mode": "threshold"}
+      ]
+    },
+    {
+      "key": "spilliaert",
+      "file": "File:Léon Spilliaert (1908) - De Duizeling.jpg",
+      "short": "vertigo",
+      "title": "Vertigo",
+      "about": [
+        "Léon Spilliaert",
+        "(1881-1946)",
+        "1908, on paper",
+        "Mu.ZEE, Ostend"
+      ],
+      "story": "Léon Spilliaert, born in the Belgian seaside town of Ostend, was mostly self-taught, sickly and shy. Stomach ulcers kept him awake, so he walked the empty promenade, dykes and beaches at night, and drew what he found: lone figures, endless walls, the sea in the dark. In Vertigo a woman stands on a staircase that seems to spin away beneath her.",
+      "views": [
+        {"box": [0, 0, 1, 1], "blur": 0.3},
+        {"box": [0, 0, 1, 0.6], "blur": 0.3}
+      ]
+    },
+    {
+      "key": "callot",
+      "file": "File:The Hanging Met DP891375.jpg",
+      "short": "the hanging",
+      "title": "The Hanging, from The Miseries of War",
+      "about": [
+        "Jacques Callot",
+        "(1592-1635)",
+        "1633, etching"
+      ],
+      "story": "In 1633 Cardinal Richelieu's army occupied Lorraine, Callot's homeland. That year he published 18 small etchings, each about 8 by 18 cm, of what soldiers did to ordinary people in the Thirty Years' War: looting, burning, torture, and then the soldiers' own punishment, as here. They have been called the first anti-war statement in European art. Goya probably owned a set; his Disasters of War followed two centuries later.",
+      "views": [
+        {"box": [0.05, 0.08, 0.95, 0.7], "mode": "threshold", "blur": 0.6, "threshold": 0.6},
+        {"box": [0.2, 0.05, 0.8, 0.6], "mode": "threshold", "blur": 0.5, "threshold": 0.6, "fill": true}
+      ]
+    },
+    {
+      "key": "gag",
+      "file": "File:Wanda Gag-Millions of Cats.jpg",
+      "short": "cats",
+      "title": "Millions of Cats",
+      "about": [
+        "Wanda Gág",
+        "(1893-1946)",
+        "1928, picture book"
+      ],
+      "story": "A very old man goes out to find one cat for his wife and comes home with \"hundreds of cats, thousands of cats, millions and billions and trillions of cats\". Wanda Gág first told the tale to friends' children. Published in 1928, with lettering by her brother Howard, it won a Newbery Honor and is the oldest American picture book still in print. She pioneered the double-page spread, letting pictures sweep across both pages, like these hills.",
+      "views": [
+        {"box": [0, 0, 1, 1], "mode": "threshold"},
+        {"box": [0, 0.28, 1, 0.86], "mode": "threshold", "fill": true}
+      ]
+    }
+  ]
+}

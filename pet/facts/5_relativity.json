@@ -1,0 +1,139 @@
+{
+  "facts": [
+    {
+      "title": "gps and relativity",
+      "fact": "Without Einstein's relativity, GPS would be kilometres off within a day.",
+      "more": [
+        "GPS satellites carry atomic clocks, and your phone finds where it is by timing signals from several of them. Light covers 30 centimetres in a billionth of a second, so the clocks must agree to within a few billionths of a second.",
+        "Relativity changes their rate in two ways. They move fast, which by special relativity makes them tick slower, losing about 7 microseconds a day. But they are high up, where gravity is weaker, and by general relativity clocks there tick faster, gaining about 45 microseconds a day.",
+        "Together that's 38 microseconds a day too fast. Left alone, positions would drift by about 10 kilometres every day. So the satellite clocks are set to tick slightly slow before launch, by exactly the amount Einstein's equations give."
+      ]
+    },
+    {
+      "title": "muons",
+      "fact": "Particles made high in the sky reach the ground only because their time runs slow.",
+      "more": [
+        "When cosmic rays hit the top of the atmosphere, they make particles called muons, which decay in about two millionths of a second. Even at nearly the speed of light, in that time a muon should cover only about 600 metres.",
+        "Yet huge numbers of them reach the ground, 15 kilometres below. Roughly one passes through your hand every second.",
+        "The reason is time dilation. To us, a muon's clock runs slow because it moves so fast, and its two microseconds stretch many times longer. From the muon's point of view, it's the atmosphere that is squashed thinner. Either way, it arrives. Counting muons at different heights was one of the first tests of relativity."
+      ]
+    },
+    {
+      "title": "flying clocks",
+      "fact": "In 1971, atomic clocks flown around the world came back out of step with those at home.",
+      "more": [
+        "Relativity says moving clocks run slow, and clocks higher up, in weaker gravity, run fast. In 1971, Joseph Hafele and Richard Keating tested both by taking atomic clocks on ordinary passenger flights around the world, once eastward and once westward.",
+        "When they landed and were compared with clocks that had stayed at the US Naval Observatory, the eastbound clocks had lost about 60 billionths of a second, and the westbound ones had gained about 270, as relativity predicted. The directions differ because Earth spins: flying east adds the plane's speed to the ground's.",
+        "That is the twin paradox made real. A twin who travels to a star and back at nearly light speed really does come home younger than the one who stayed, because the two took different paths through spacetime."
+      ]
+    },
+    {
+      "title": "millimetre clocks",
+      "fact": "The best clocks can tell that time runs faster a millimetre higher up.",
+      "more": [
+        "General relativity says gravity slows time: the deeper you are in a gravity well, the slower your clock. On Earth the effect is tiny. Your head ages faster than your feet, by about half a millionth of a second over a lifetime.",
+        "Optical atomic clocks, which count the vibrations of light absorbed by atoms held in lasers, are so stable that they would lose less than a second over the age of the universe. In 2022, a team in Colorado used one to measure the difference in tick rate across a cloud of atoms just a millimetre tall.",
+        "Clocks like these could one day map the ground beneath them, or find hidden masses underground, just by how fast they tick. The second will probably soon be redefined with them."
+      ]
+    },
+    {
+      "title": "e = mc^2",
+      "fact": "A hot cup of coffee weighs slightly more than a cold one. Energy has mass.",
+      "more": [
+        "Einstein's E = mc^2 says mass and energy are the same thing, exchanged at the rate of the speed of light squared. That number is huge, so a little mass is a lot of energy, and a lot of energy is only a little mass.",
+        "Anything that gains energy gains mass. A cup of coffee heated by 60 degrees gains almost a billionth of a gram. A charged phone battery is heavier than a flat one, by less than a billionth of a gram. Far too little to weigh, but real.",
+        "In nuclear reactions it is big enough to measure: the products of fusion in the Sun weigh about 0.7 percent less than what went in. That missing mass is the energy of sunlight. The Sun loses about 4 million tons of mass every second this way."
+      ]
+    },
+    {
+      "title": "magnetism is motion",
+      "fact": "Magnetism is electricity seen by someone moving. Relativity turns one into the other.",
+      "more": [
+        "A wire carrying a current has moving electrons and still positive charges, equal in number, so overall it is neutral: it doesn't pull on a still charge outside it. Yet a charge moving alongside the wire feels a force. We call that force magnetic.",
+        "Now look from the moving charge's point of view, keeping pace with the electrons. Relativity says that moving things are shortened, so the spacing of the electrons and of the positive charges changes differently, and the wire is no longer neutral. The charge just feels an electric force.",
+        "So the magnetic force is the electric force, seen while moving. It is a relativity effect, and the electrons in a wire drift at less than a millimetre per second, but there are so many of them that it adds up to forces strong enough to drive motors."
+      ]
+    },
+    {
+      "title": "faster than light",
+      "fact": "The universe is 13.8 billion years old, yet we see things 46 billion light-years away.",
+      "more": [
+        "Nothing can move through space faster than light. But space itself can stretch, and it has been expanding since the Big Bang, carrying galaxies apart.",
+        "The light from the farthest things we can see has travelled for about 13.8 billion years. All that time, the space behind it kept stretching, so the place it left is now about 46 billion light-years away. Galaxies far enough away are moving away from us faster than light today, and that breaks no law.",
+        "Because the expansion is speeding up, light that some galaxies send out today will never reach us. Over hundreds of billions of years, every galaxy beyond our local group will fade from view."
+      ]
+    },
+    {
+      "title": "gravitational lenses",
+      "fact": "Gravity bends light. Whole galaxies act as lenses that magnify what is behind them.",
+      "more": [
+        "General relativity says mass curves space and time, and light follows the curve. In 1919, during a solar eclipse, Arthur Eddington's team measured starlight passing near the Sun bent by the amount Einstein predicted, which made Einstein world-famous overnight.",
+        "A big cluster of galaxies bends the light from galaxies far behind it, magnifying them and smearing them into arcs. When the line-up is perfect, the background galaxy appears as a ring around the cluster: an Einstein ring.",
+        "Astronomers use these natural telescopes to see some of the most distant galaxies, and to weigh the clusters, which is one of the ways we know dark matter is there. One lensed supernova was seen four times at once, its light arriving along four different paths."
+      ]
+    },
+    {
+      "title": "gravitational waves",
+      "fact": "Colliding black holes shake space itself, by less than the width of a proton.",
+      "more": [
+        "General relativity predicts that accelerating masses send out ripples in spacetime, gravitational waves, that stretch and squeeze space as they pass. Einstein doubted they could ever be detected.",
+        "On 14 September 2015, LIGO detected waves from two black holes, each about 30 times the mass of the Sun, merging 1.3 billion light-years away. In the last fraction of a second, they gave off more power as waves than all the stars in the observable universe give off as light.",
+        "By the time they reached Earth, the waves stretched LIGO's 4-kilometre arms by a few thousandths of a proton's width. The detection won the 2017 Nobel Prize. Since then, hundreds of mergers have been detected, including colliding neutron stars."
+      ]
+    },
+    {
+      "title": "frame dragging",
+      "fact": "The spinning Earth drags space and time around with it, very slightly.",
+      "more": [
+        "General relativity says a spinning mass doesn't just curve spacetime, it twists it, dragging it around like a spoon turning in honey. This is frame dragging.",
+        "In 2004 and 2005, the Gravity Probe B satellite orbited Earth with four gyroscopes: quartz spheres among the roundest objects ever made, spinning in a near-perfect vacuum. Any drift in where they pointed would have to come from spacetime itself.",
+        "Their axes drifted by the amount Einstein's theory predicts. The frame-dragging part was tiny: about the width of a hair seen from 500 metres away, per year. Near spinning black holes, frame dragging is huge: close enough, nothing can stand still, and everything is swept around."
+      ]
+    },
+    {
+      "title": "falling into a hole",
+      "fact": "If you watched a friend fall into a black hole, you would never see them cross the edge.",
+      "more": [
+        "Near a black hole, gravity slows time enormously. As your friend falls toward the event horizon, the point of no return, their clock looks slower and slower to you, and their light gets redder and dimmer.",
+        "From far away, you'd see them slow down and fade at the horizon, never quite crossing it, until their light is too faint to detect.",
+        "For your friend, nothing special happens at the horizon: they cross it in a finite time and keep falling. Near a black hole a few times the mass of the Sun, its tides would stretch them apart first: spaghettification. A giant one, like those at the centres of galaxies, is so large that they would cross the horizon unharmed."
+      ]
+    },
+    {
+      "title": "the speed of light",
+      "fact": "The speed of light isn't really about light. It is the top speed of cause and effect.",
+      "more": [
+        "Relativity grew from the discovery that light moves at the same speed for everyone, however fast they are going. But this speed, c, is deeper than light: it is built into the geometry of space and time, as the speed limit of any signal of any kind.",
+        "Anything without mass must move at exactly c: light, and gravitational waves too. In 2017, gravitational waves and light from colliding neutron stars 130 million light-years away arrived within two seconds of each other, which shows that gravity travels at the speed of light, to better than a part in a thousand trillion.",
+        "If the Sun suddenly vanished, Earth would keep circling its empty spot for eight minutes, until the news arrived."
+      ]
+    },
+    {
+      "title": "free fall",
+      "fact": "Astronauts float not because gravity is gone, but because they are always falling.",
+      "more": [
+        "At the height of the International Space Station, gravity is still about 90 percent as strong as on the ground. The station and the astronauts are falling toward Earth all the time. They just move sideways so fast, 8 kilometres a second, that they keep missing it.",
+        "Since they all fall together, nothing presses on anything, and they float. In 1907, Einstein called the realization that a falling person feels no weight the happiest thought of a lifetime.",
+        "Einstein made it a principle: being in free fall is exactly the same as being far from all gravity, and standing on Earth is exactly the same as being pushed up in an accelerating rocket. From it came general relativity, where gravity is not a force at all, but the curving of spacetime."
+      ]
+    },
+    {
+      "title": "a black hole photo",
+      "fact": "In 2019, astronomers photographed a black hole's shadow with an Earth-sized telescope.",
+      "more": [
+        "A black hole gives off no light, but the gas swirling around it does, glowing hot as it falls in. Light passing near the hole is bent around it, so it looks like a bright ring around a dark shadow, about two and a half times wider than the horizon.",
+        "The black hole in the galaxy M87 is 6.5 billion times the mass of the Sun, but it's 55 million light-years away, so its ring looks as small as an orange on the Moon would. Seeing it needs a telescope as big as the Earth.",
+        "The Event Horizon Telescope linked radio dishes from Spain to the South Pole, recording at the same instant, timed by atomic clocks, and combined their data with supercomputers. In 2022 it pictured the black hole at the centre of our own galaxy."
+      ]
+    },
+    {
+      "title": "earth's young core",
+      "fact": "Because of relativity, Earth's centre is 2.5 years younger than its surface.",
+      "more": [
+        "General relativity says time runs slower deeper in a gravity well. That isn't the same as where gravity pulls hardest: at the centre of the Earth there is no pull at all, but it is the deepest point of the well.",
+        "Over the 4.5 billion years of Earth's history, the small difference adds up. In 2016, physicists calculated that the core is about two and a half years younger than the crust.",
+        "Richard Feynman once estimated the difference as a day or two, a rare slip. The calculation is simple, but it is easy to get wrong."
+      ]
+    }
+  ]
+}

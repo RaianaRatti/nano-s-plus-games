@@ -3,12 +3,12 @@
 // A Nano app runs inside the event loop of the SDK: the app waits for USB commands with
 // io_recv_command(), and while it waits the SDK calls io_event() for each event the MCU sends
 // (a button changed, 100 ms passed, ...). This file replaces the SDK's default io_event() so that
-// the arcade sees the raw state of the buttons, which a game needs (is LEFT held down right now?),
+// the app sees the raw state of the buttons, which a game needs (is LEFT held down right now?),
 // instead of only NBGL's menu gestures.
 //
 // Every event goes to the OS first, exactly as the SDK's own handler does it (lib_ux_nbgl/ux.c).
 // When the OS is showing its own screen (the lock screen, the PIN pad) it keeps the event, the
-// arcade draws nothing and the running game is paused. When the OS gives the screen back it asks
+// app draws nothing and the running game is paused. When the OS gives the screen back it asks
 // for a redraw and the last frame is shown again.
 
 #include "os.h"
@@ -17,9 +17,9 @@
 #include "nbgl_obj.h"
 #include "nbgl_screen.h"
 
-#include "arcade.h"
+#include "core.h"
 
-// The status word for "instruction not supported": the arcade answers no USB command.
+// The status word for "instruction not supported": the apps answer no USB command.
 #define SW_INS_NOT_SUPPORTED 0x6D00
 
 // Gives the event to the OS. Returns true when the app may use it and draw.
@@ -96,7 +96,7 @@ void app_main(void)
     shell_render();
     nbgl_refresh();
 
-    // Nothing to do over USB: refuse every command. The games run inside the events above.
+    // Nothing to do over USB: refuse every command. The apps run inside the events above.
     for (;;) {
         if (io_recv_command() < 0) {
             return;

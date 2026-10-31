@@ -1,106 +1,19 @@
-// Badge Arcade: the games of BadgeOS on a Ledger Nano S Plus.
+// Badge Arcade: the games of BadgeOS on a Ledger Nano S Plus, built on the core (core.h).
 //
 // The pieces:
-//   gfx.c      a 128 x 64, 1 bit framebuffer shown through one full-screen NBGL image
-//   ui.c       the receipt look of BadgeOS, shrunk to the Nano screen: header, rules, footer
-//   input.c    two buttons turned into gestures: LEFT, RIGHT, BOTH (select) and HOLD (back)
-//   shell.c    the launcher and the switch between apps
-//   main.c     the event loop: every event goes to the OS first, then to the arcade
+//   shell.c    the launcher and the switch between games
+//   icons.c    the launcher's pictures
+//   storage.c  the best scores, in flash
 //   run.c      the life of a score game: title, play, pause, crash, game over, best score
 //   dodge.c, dice.c, duel.c   the games of BadgeOS
 //   snake.c, pong.c, bricks.c, racer.c, cave.c, flip.c, runner.c   the arcade's own games
-//
-// Time is counted in ticks. The OS sends a ticker event every 100 ms, so the games update at
-// 10 Hz and move on a button the moment it is pressed.
 
 #pragma once
 
-#include <stdbool.h>
-#include <stddef.h>
-#include <stdint.h>
+#include "core.h"
 
-#define TICK_MS 100
-
-// ---------------------------------------------------------------------------------------------
-// Display: gfx.c
-// ---------------------------------------------------------------------------------------------
-
-#define GFX_W 128
-#define GFX_H 64
-
-#define FONT_W   5  // a glyph is 5 x 7 pixels ...
-#define FONT_H   7
-#define FONT_ADV 6  // ... and the next one starts 6 pixels to the right (times the scale)
-
-// Glyphs that are not ASCII.
-#define G_LEFT  "\x01"  // a triangle pointing left
-#define G_RIGHT "\x02"  // a triangle pointing right
-#define G_DOT   "\x03"  // a middle dot
-#define G_HEART "\x04"
-#define G_STAR  "\x05"
-
-void gfx_init(void);
-void gfx_present(void);
-void gfx_clear(bool on);
-void gfx_pixel(int x, int y, bool on);
-void gfx_fill_rect(int x, int y, int w, int h, bool on);
-void gfx_rect(int x, int y, int w, int h, bool on);
-void gfx_round_rect(int x, int y, int w, int h, bool on);
-void gfx_dotted_hline(int x, int y, int w, bool on);
-int  gfx_text_width(const char *text, int scale);
-int  gfx_text(int x, int y, const char *text, int scale, bool on);
-void gfx_text_center(int cx, int y, const char *text, int scale, bool on);
-void gfx_text_right(int right, int y, const char *text, int scale, bool on);
-
-// Draws a 1 bit picture whose rows are `w` bits wide, the leftmost pixel in the highest of them:
-// 0b0110 is ".XX.". Only the set bits are drawn (lit, or cut out when on is false). flip draws it
-// upside down.
-void gfx_sprite(int x, int y, const uint16_t *rows, int w, int h, bool flip, bool on);
-void gfx_sprite_scaled(int x, int y, const uint16_t *rows, int w, int h, bool flip, bool on, int scale);
-void gfx_bubble(int x, int y, int w, int h, int r, bool on);
-
-// ---------------------------------------------------------------------------------------------
-// The look: ui.c and icons.c
-// ---------------------------------------------------------------------------------------------
-
-#define UI_TOP 10  // the first row under the bar
-
-void ui_dirty(void);
-bool ui_take_dirty(void);
-void ui_page(void);
-void ui_bar(const char *left, const char *right);
-void ui_rule(int y);
-void ui_bubble_text(int cx, int y, const char *text, int scale);
-void ui_best(int cx, int y, uint32_t best);
-void ui_pause_sign(void);
-void ui_icon(uint8_t card, int x, int y, int scale);  // card: the launcher's, 0 .. NB_GAMES
-
-// Formats an unsigned number, optionally followed by a suffix, into out (at least 16 bytes).
-void ui_number(char *out, uint32_t value, const char *suffix);
-
-// ---------------------------------------------------------------------------------------------
-// Input: input.c
-// ---------------------------------------------------------------------------------------------
-
-#define BTN_LEFT  0x01
-#define BTN_RIGHT 0x02
-#define BTN_BOTH  (BTN_LEFT | BTN_RIGHT)
-
-typedef enum {
-    EV_DOWN,    // buttons went down (the bits in `buttons`): for games that need the instant
-    EV_LEFT,    // the left button was clicked alone (on release)
-    EV_RIGHT,   // the right button was clicked alone (on release)
-    EV_SELECT,  // both buttons were pressed together and released
-    EV_BACK,    // both buttons were held for HOLD_TICKS
-} event_t;
-
-#define HOLD_TICKS 8  // 0.8 s
-
-void    input_reset(void);
-void    input_buttons(uint8_t mask);
-void    input_tick(void);
-void    input_swallow(void);
-uint8_t input_held(void);
+// The launcher's picture for a card (0 .. NB_GAMES): icons.c
+void ui_icon(uint8_t card, int x, int y, int scale);
 
 // ---------------------------------------------------------------------------------------------
 // Shell: shell.c
@@ -123,13 +36,7 @@ typedef enum {
 // The launcher shows one card per game, in the order above, then Quit.
 #define NB_GAMES (APP_RUNNER - APP_DODGE + 1)
 
-void shell_init(void);
 void shell_open(app_id_t app);
-void shell_back(void);
-void shell_event(event_t event, uint8_t buttons);
-void shell_tick(void);
-void shell_suspend(void);
-void shell_render(void);
 
 // ---------------------------------------------------------------------------------------------
 // Persistent scores: storage.c
@@ -149,13 +56,6 @@ typedef enum {
 
 uint32_t storage_best(best_t slot);
 void     storage_set_best(best_t slot, uint32_t score);
-
-// ---------------------------------------------------------------------------------------------
-// Random numbers from the secure element's hardware generator: random.c
-// ---------------------------------------------------------------------------------------------
-
-// A uniform number in [low, high).
-uint32_t random_range(uint32_t low, uint32_t high);
 
 // ---------------------------------------------------------------------------------------------
 // A run of a score game: run.c

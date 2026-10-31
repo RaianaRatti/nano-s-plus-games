@@ -1,0 +1,238 @@
+{
+  "facts": [
+    {
+      "title": "glass",
+      "fact": "Glass is not a slow liquid. Old windows are thick at the bottom for another reason.",
+      "more": [
+        "A popular story says glass is a liquid that flows very slowly, which is why old church windows are thicker at the bottom. It isn't true.",
+        "Glass is an amorphous solid: its atoms are frozen in place in a jumbled arrangement, like a snapshot of a liquid, instead of the neat rows of a crystal. Calculations show that at room temperature, medieval glass would need far longer than the age of the universe to sag visibly.",
+        "The real reason is how the glass was made: blown and spun into sheets of uneven thickness, which glaziers often fitted with the thick edge at the bottom. But not always, and some old windows are thicker at the top. Exactly how a liquid turns into a glass is still one of the big open questions about solids."
+      ]
+    },
+    {
+      "title": "plasma",
+      "fact": "Almost all the matter you can see in the universe is neither solid, liquid nor gas.",
+      "more": [
+        "Heat a gas enough and its atoms lose electrons, leaving a soup of charged particles: plasma, the fourth state of matter. Because its particles are charged, plasma conducts electricity and is steered by magnetic fields, unlike a gas.",
+        "Stars are made of plasma, so over 99 percent of the visible matter in the universe is in this state. On Earth you see it in lightning, neon signs, the aurora and the flame of a welding torch.",
+        "Fusion reactors try to hold plasma at over 100 million degrees, hotter than the Sun's core, with magnetic fields, since no wall could touch it. Keeping it steady is hard: it twists and wriggles almost like a living thing."
+      ]
+    },
+    {
+      "title": "the leidenfrost drop",
+      "fact": "Water lasts longer on a very hot pan than on a warm one: it floats on its own steam.",
+      "more": [
+        "Flick drops of water on a pan at 100 degrees and they sizzle away at once. On a pan above about 200 degrees, they skitter around for a minute or more.",
+        "At that temperature, the bottom of the drop boils so fast that it makes a thin cushion of steam, and the drop floats on it. Steam carries heat poorly, so the drop is insulated from the pan and evaporates slowly.",
+        "That is the Leidenfrost effect, described by a doctor in 1756. It is why liquid nitrogen spilled on a floor races around in beads, and why a wet finger can be dipped very briefly into molten lead without harm (please don't)."
+      ]
+    },
+    {
+      "title": "supercooled water",
+      "fact": "Pure water can stay liquid far below 0 degrees. It needs something to freeze around.",
+      "more": [
+        "Water doesn't freeze just because it is cold enough. Ice has to start somewhere: a tiny seed crystal, which usually forms on dust, a scratch in the container or a bubble.",
+        "Very pure, still water has none, so it can stay liquid well below freezing: in labs, down to about minus 40 degrees, and tiny droplets even colder. This is supercooled water. Tap the bottle or drop in a crystal of ice, and ice shoots through it in seconds.",
+        "Clouds are full of supercooled droplets. When they hit an aircraft's wing, they freeze on contact, which is why planes need de-icing systems."
+      ]
+    },
+    {
+      "title": "the triple point",
+      "fact": "At one exact temperature and pressure, water boils and freezes at the same time.",
+      "more": [
+        "Whether water is ice, liquid or vapor depends on both temperature and pressure. Lower the pressure and water boils at a lower temperature: on top of Mount Everest it boils at about 70 degrees, which is why cooking there is slow.",
+        "At 0.01 degrees and a pressure about 160 times lower than at sea level, all three states exist together in balance. That is water's triple point. In a sealed glass cell at that point, ice, liquid water and vapor sit together, the water freezing and boiling at once.",
+        "Because nature fixes it so exactly, the triple point of water was long used to define the temperature scale itself."
+      ]
+    },
+    {
+      "title": "the critical point",
+      "fact": "Heat water under enough pressure and its liquid and its gas become the same thing.",
+      "more": [
+        "Normally, a liquid and its vapor are clearly different: one dense, the other thin, with a surface between them. Heat water in a sealed container and the liquid expands while more and more vapor is squeezed in above it, so they grow closer in density.",
+        "At 374 degrees and 218 times air pressure they become identical, and the surface between them disappears. Beyond this critical point there is only a supercritical fluid, which flows through things like a gas and dissolves things like a liquid.",
+        "Supercritical carbon dioxide is used to take the caffeine out of coffee beans. And right at the critical point, fluids turn cloudy and shimmer, because their density flickers at every scale at once."
+      ]
+    },
+    {
+      "title": "kinds of ice",
+      "fact": "There are about twenty kinds of ice. Some stay solid at hundreds of degrees.",
+      "more": [
+        "The ice in your freezer is ice Ih, where water molecules form a hexagonal lattice with plenty of empty space. That is why ice is less dense than water and floats, which is unusual: most solids sink in their own liquid.",
+        "Squeeze water hard enough and its molecules pack into other arrangements. About twenty have been found, named with Roman numerals. Ice VII forms at tens of thousands of times air pressure, and at higher pressures can stay solid at hundreds of degrees.",
+        "Such ices probably exist deep inside icy moons like Ganymede. One, ice XVIII, made with lasers in 2019, is superionic: half solid, half liquid. Its oxygen atoms are locked in a crystal while its hydrogen flows through it."
+      ]
+    },
+    {
+      "title": "below absolute zero",
+      "fact": "Some systems can have negative temperatures, and they are hotter than infinitely hot.",
+      "more": [
+        "Temperature isn't really how fast things move. It tells you how a system's disorder changes as you add energy. For most things, adding energy opens up more ways to arrange them, and the temperature is positive.",
+        "But some systems have a top energy, like tiny magnets that can only point up or down. Fill most of them up to the top state, and adding more energy makes them more orderly, not less. Then the formula gives a temperature below zero.",
+        "Such a system isn't cold. Put it in touch with anything at a positive temperature and heat flows out of it: it is hotter than any positive temperature, even an infinite one. It was done with the spins of atomic nuclei in 1951, and with a gas of moving atoms in 2013."
+      ]
+    },
+    {
+      "title": "graphene",
+      "fact": "Graphene is carbon one atom thick, and one of the strongest materials ever tested.",
+      "more": [
+        "Pencil lead is graphite: stacks of flat sheets of carbon atoms in hexagons, like chicken wire. In 2004, Andre Geim and Konstantin Novoselov peeled off single sheets with sticky tape, which won them the 2010 Nobel Prize.",
+        "A single layer, graphene, is about 200 times stronger than steel of the same thickness, and it carries heat and electricity extremely well.",
+        "Its electrons are strange: they move as if they had no mass, obeying the same kind of equation as particles near light speed, only 300 times slower. And two sheets stacked with a twist of about 1.1 degrees become a superconductor."
+      ]
+    },
+    {
+      "title": "topology in matter",
+      "fact": "Some materials are insulators inside but always conduct electricity on their surface.",
+      "more": [
+        "Topology is the mathematics of shapes that ignores details. To a topologist a doughnut and a coffee mug are the same, since each has one hole: you can't smoothly turn either into a ball without tearing it.",
+        "In some materials, the quantum waves of the electrons are twisted in a way that is topological in that sense. Inside, the material is an insulator. But at the edge, where it meets the ordinary outside world, the twist has to undo itself, and that forces a conducting layer to exist on the surface.",
+        "Scratch the surface or add impurities, and the conducting layer is still there, because small damage can't change a topology. The 2016 Nobel Prize went to the theorists who first understood topological states of matter."
+      ]
+    },
+    {
+      "title": "quartz watches",
+      "fact": "A quartz watch counts the vibrations of a crystal, 32,768 times every second.",
+      "more": [
+        "Quartz is piezoelectric: squeeze it and a voltage appears across it, and put a voltage across it and it bends. So a piece of quartz in a circuit can be made to vibrate, pushed by the electricity and pushing back.",
+        "Cut into a tiny tuning fork of the right shape, it rings at exactly 32,768 times a second, very steadily. That number is 2 to the power 15, so a chain of 15 circuits that each halve the rate turns it into one tick per second.",
+        "The same effect makes the spark in gas lighters, where a hammer strikes a crystal and the voltage jumps a gap, and turns sound into electricity in some microphones."
+      ]
+    },
+    {
+      "title": "band gaps",
+      "fact": "The color of an LED is set by the size of an energy gap inside its crystal.",
+      "more": [
+        "In a solid, electrons can only have energies in certain bands. In a metal, the top band is half full, so electrons move easily: it conducts. In an insulator, the top band is full and the next is far above it, so they can't move.",
+        "Semiconductors like silicon are in between: the gap to the next band is small, so a little energy, or a few atoms of another element mixed in, lets some electrons cross it. That makes their conduction easy to control, the basis of every transistor.",
+        "In an LED, electrons fall back across the gap, and each gives off a photon with the energy of the gap. A wide gap makes blue light, a narrow one red or infrared. The blue LED needed a crystal that took decades to grow well. It won the 2014 Nobel Prize and made white LED lamps possible."
+      ]
+    },
+    {
+      "title": "metamaterials",
+      "fact": "Materials built from tiny patterns can bend light backwards, which no natural one does.",
+      "more": [
+        "How a material handles light usually depends on its atoms. Metamaterials depend on structure instead: repeating patterns, like tiny metal rings and wires, smaller than the wavelength of the light they are made for.",
+        "With the right pattern, a metamaterial can have a negative refractive index: light entering it bends the wrong way, to the same side it came from. A straw in a glass of such stuff would seem to bend back out of the liquid.",
+        "In 2006, a metamaterial cloak made a copper cylinder nearly invisible to microwaves, by guiding them around it like water around a rock. Doing the same for visible light, in all colors, remains very hard."
+      ]
+    },
+    {
+      "title": "spintronics",
+      "fact": "Hard drives grew huge thanks to a quantum effect in metal layers a few atoms thick.",
+      "more": [
+        "Electrons have spin, which makes them tiny magnets. In a magnetic metal, electrons spinning one way pass through more easily than those spinning the other way.",
+        "In 1988, two teams in France and Germany stacked magnetic layers a few atoms thick with non-magnetic metal between them. When the magnetic layers pointed the same way, current flowed easily. When they pointed opposite ways, the resistance shot up. A tiny magnetic field could switch between the two.",
+        "This giant magnetoresistance made it possible to read much smaller magnetic bits, and within ten years nearly every hard drive used it. It won the 2007 Nobel Prize and started spintronics: electronics that uses spin as well as charge."
+      ]
+    },
+    {
+      "title": "magnets are quantum",
+      "fact": "Classical physics proves magnets can't exist. Every fridge magnet is a quantum object.",
+      "more": [
+        "In 1911 and 1919, Niels Bohr and Hendrika van Leeuwen proved a surprising theorem: in classical physics, a material in balance at any temperature can never be magnetic. The effects of its moving electrons always cancel exactly.",
+        "Yet magnets exist, so classical physics must be missing something. Magnetism comes from the electron's spin, a purely quantum property, together with the Pauli exclusion principle.",
+        "In iron, the exclusion principle makes it cost less energy for neighbouring electrons to point their spins the same way. Billions line up, and their tiny fields add up to one you can feel. Heat iron past its Curie temperature, 770 degrees, and the spins scramble: the magnetism disappears."
+      ]
+    },
+    {
+      "title": "oobleck",
+      "fact": "Cornflour and water make a liquid you can run across, but you sink if you stand still.",
+      "more": [
+        "Most liquids, like water, flow the same way however fast you push them. Isaac Newton described their behaviour, so they are called Newtonian.",
+        "A thick mix of cornflour and water is not. Stir it slowly and it flows. Hit it and it acts like a solid. The grains are packed so closely that when pushed fast, they jam against each other and lock into chains that bear the force.",
+        "People have run across pools of it, and sunk as soon as they stopped. Engineers use the same effect in protective gear that stays soft until it is struck."
+      ]
+    },
+    {
+      "title": "liquid crystals",
+      "fact": "Many screens use liquid crystals: a state of matter between liquid and solid.",
+      "more": [
+        "In a liquid, molecules tumble randomly. In a crystal, they sit in a fixed grid. Some rod-shaped molecules do something in between: they flow like a liquid, but all point in roughly the same direction, like logs floating down a river.",
+        "Because they are aligned, liquid crystals twist polarized light, and an electric field can turn them, which changes the twist. Put them between two polarizing filters, and each tiny region can let light through or block it.",
+        "That is how an LCD works: millions of pixels, each a little shutter of liquid crystal. The state was discovered in 1888 in a substance from carrots, which seemed to have two melting points."
+      ]
+    },
+    {
+      "title": "time crystals",
+      "fact": "A time crystal repeats in time the way a crystal repeats in space, without heating up.",
+      "more": [
+        "A crystal is matter that repeats in space: its atoms sit in a pattern. In 2012, Frank Wilczek asked whether matter could also repeat in time, cycling forever in its lowest energy state. It was soon proved that it can't, at least not in that form.",
+        "But a variant can. Kick a group of quantum spins with a regular pulse, and they flip back and forth in a rhythm of their own, for example at twice the period of the kicks. It's like a jelly you poke once a second that wobbles once every two seconds, and keeps that rhythm even if the pokes are a little off.",
+        "Normally, kicking a system like this would heat it up into chaos. A time crystal doesn't heat up. One was made in 2021 on Google's quantum computer, with 20 qubits."
+      ]
+    },
+    {
+      "title": "quasicrystals",
+      "fact": "Quasicrystals are ordered but never repeat. They were thought impossible.",
+      "more": [
+        "Crystals are built by repeating one small pattern, like tiles on a floor. Mathematics shows that such repeating patterns can only have certain symmetries: you can tile a floor with squares or hexagons, but not with pentagons.",
+        "In 1982, Dan Shechtman saw a metal alloy whose atoms had five-fold symmetry. Colleagues mocked the idea, and the famous chemist Linus Pauling said there are no quasicrystals, only quasi-scientists. But Shechtman was right: the atoms were ordered, yet the pattern never repeated, like a Penrose tiling.",
+        "It won the 2011 Nobel Prize in Chemistry. Natural quasicrystals were later found in a meteorite from Russia, and another in the glassy rock left by the first atomic bomb test."
+      ]
+    },
+    {
+      "title": "sonoluminescence",
+      "fact": "Sound can squeeze a bubble in water so hard that it flashes with light.",
+      "more": [
+        "Trap a small air bubble in water with a strong sound wave. As the pressure swings, the bubble grows, then collapses violently, tens of thousands of times a second.",
+        "At the moment of collapse, the gas inside is crushed and heats up so fast that it gives off a flash of light lasting less than a billionth of a second. Measurements suggest thousands to tens of thousands of degrees inside: hotter than the surface of the Sun.",
+        "Exactly how the light is made is still debated. A shrimp does something similar: the pistol shrimp snaps its claw so fast that it makes a collapsing bubble, with a bang loud enough to stun its prey and a faint flash of light."
+      ]
+    },
+    {
+      "title": "brownian motion",
+      "fact": "Grains jiggling in water are how Einstein proved that atoms are real.",
+      "more": [
+        "In 1827, the botanist Robert Brown saw tiny particles from pollen jiggle endlessly in water under a microscope, even ones from long-dead plants. Nobody could explain it.",
+        "In 1905, Einstein worked out that if water is made of molecules too small to see, always moving, then a small grain would be bumped unevenly from different sides and wander in a random zigzag. Einstein predicted how far it should drift, depending on the size of the molecules.",
+        "Jean Perrin measured it and confirmed the prediction, which won the 1926 Nobel Prize. Until then, many respected scientists doubted that atoms were real. The same mathematics now describes stock prices and how heat spreads."
+      ]
+    },
+    {
+      "title": "the arrow of time",
+      "fact": "The laws of physics work the same backwards in time. Only entropy tells past from future.",
+      "more": [
+        "Film two billiard balls colliding and play it backwards: it still looks like a possible collision. Almost all the basic laws of physics work equally well forwards and backwards in time.",
+        "Yet eggs break and never unbreak, and milk mixes into coffee but never unmixes. The difference is entropy: roughly, a count of how many ways the parts of something can be arranged and still look the same. There are vastly more mixed arrangements than unmixed ones, so things drift toward mixed, just by chance.",
+        "So the past had lower entropy than the present. Tracing it back, the universe must have begun in an extraordinarily low-entropy state at the Big Bang. Why it did is unknown, and it may be the reason we remember the past and not the future."
+      ]
+    },
+    {
+      "title": "maxwell's demon",
+      "fact": "Erasing information costs energy. Deleting a single bit must give off a little heat.",
+      "more": [
+        "In 1867, James Clerk Maxwell imagined a tiny demon guarding a door between two boxes of gas. Letting only fast molecules through one way and slow ones the other, it would make one side hot and the other cold without doing any work, breaking the laws of thermodynamics.",
+        "The answer took a century. The demon must remember each molecule's speed to decide, and its memory fills up. In 1961, Rolf Landauer showed that erasing a bit of memory must release a minimum amount of heat, which pays back exactly what the demon gained.",
+        "So information is physical. The Landauer limit was confirmed by experiment in 2012. It is tiny: today's chips use far more energy than that per bit, so there is plenty of room to improve."
+      ]
+    },
+    {
+      "title": "metallic hydrogen",
+      "fact": "Deep inside Jupiter, hydrogen is squeezed into a liquid metal.",
+      "more": [
+        "Hydrogen is the simplest element, and on Earth it is a gas that doesn't conduct electricity. But in 1935, physicists predicted that at enormous pressure its atoms would be squeezed so close that their electrons would be shared freely, turning it into a metal.",
+        "Inside Jupiter, pressures reach millions of times air pressure, and much of the planet's hydrogen is thought to be in this state: a vast ocean of liquid metal, whose churning makes Jupiter's huge magnetic field, the strongest of any planet.",
+        "Making it in a lab is extremely hard. Experiments squeezing hydrogen between diamonds or with shock waves have reported signs of it, but some of the claims are still disputed."
+      ]
+    },
+    {
+      "title": "laser cooling",
+      "fact": "Shine lasers on atoms the right way and they cool to millionths of a degree.",
+      "more": [
+        "Light usually heats things. But each photon an atom absorbs gives it a little kick. Tune a laser to a color just slightly too red for an atom to absorb while it sits still.",
+        "An atom moving toward the laser sees its light shifted toward blue by the Doppler effect, just enough to absorb it, and gets kicked backwards, slowing down. Atoms moving away don't absorb it. Put lasers on all six sides and every atom is slowed whichever way it moves, as if wading through syrup: optical molasses.",
+        "This cools atoms to millionths of a degree above absolute zero in a fraction of a second. It won the 1997 Nobel Prize, and it is the first step for atomic clocks, Bose-Einstein condensates and many quantum computers."
+      ]
+    },
+    {
+      "title": "absolute zero",
+      "fact": "You can get closer and closer to absolute zero, but you can never reach it.",
+      "more": [
+        "Absolute zero, minus 273.15 degrees, is the temperature at which a system is in its lowest possible energy state. Even deep space is about 2.7 degrees above it, warmed by the glow of the Big Bang.",
+        "Labs go much colder: clouds of atoms have been cooled to less than a billionth of a degree above zero. But the third law of thermodynamics says that reaching zero exactly would take infinitely many steps, because each cooling step removes a smaller share of what is left.",
+        "In 2023, physicists proved a precise quantum version: reaching absolute zero would take infinite energy, infinite time, or an infinitely complex machine. Like the speed of light, it is a limit you can approach but never touch."
+      ]
+    }
+  ]
+}

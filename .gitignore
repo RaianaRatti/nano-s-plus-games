@@ -5,3 +5,6 @@ glyphs/home_arcade_14px.gif
 screenshots/
 .venv/
 __pycache__/
+pet/glyphs/
+gallery/glyphs/
+gallery/sources/

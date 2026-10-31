@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
-# Installs Badge Arcade on a Nano S Plus connected by USB, or removes it.
-# Run it on the Mac itself, not in Docker: Docker on macOS cannot reach USB devices.
+# Installs an app on a Nano S Plus connected by USB, or removes it: Badge Arcade, or with "pet" or
+# "gallery" first, the pet or the gallery. Run it on the Mac itself, not in Docker: Docker on macOS
+# cannot reach USB devices.
 #
-#   ./scripts/load.sh            install (builds first if bin/ is empty)
-#   ./scripts/load.sh remove     uninstall
+#   ./scripts/load.sh                          install Badge Arcade (builds first if bin/ is empty)
+#   ./scripts/load.sh pet | gallery            install the pet or the gallery
+#   ./scripts/load.sh [pet | gallery] remove   uninstall
 #
 # Before: plug the Nano S Plus in, enter the PIN, stay on the dashboard, quit Ledger Live.
 # The device then asks you to allow the install; see README.md, "Put it on your Nano S Plus".
@@ -11,7 +13,18 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 TARGET_ID=0x33100004  # Nano S Plus
-APP_NAME="Badge Arcade"
+
+APP_DIR=.
+BUILD_ARGS=()
+case "${1:-}" in
+  pet | gallery)
+    APP_DIR=$1
+    BUILD_ARGS=("$1")
+    shift
+    ;;
+esac
+# The name on the dashboard, from the app's Makefile.
+APP_NAME="$(sed -n 's/^APPNAME = "\(.*\)"$/\1/p' "$APP_DIR/Makefile")"
 
 # ledgerblue, Ledger's loader, in a virtualenv of its own.
 if [ ! -x .venv/bin/python ]; then
@@ -26,8 +39,8 @@ if [ "${1:-}" = "remove" ]; then
   exit 0
 fi
 
-[ -f bin/app.apdu ] || ./scripts/build.sh
+[ -f "$APP_DIR/bin/app.apdu" ] || ./scripts/build.sh "${BUILD_ARGS[@]+"${BUILD_ARGS[@]}"}"
 
 echo "Installing $APP_NAME. Watch the device: allow the install, then confirm."
-.venv/bin/python -m ledgerblue.runScript --scp --fileName bin/app.apdu --elfFile bin/app.elf
-echo "Done: Badge Arcade is on the dashboard."
+.venv/bin/python -m ledgerblue.runScript --scp --fileName "$APP_DIR/bin/app.apdu" --elfFile "$APP_DIR/bin/app.elf"
+echo "Done: $APP_NAME is on the dashboard."

@@ -19,6 +19,7 @@ APPVERSION_N = 1
 APPVERSION_P = 0
 APPVERSION = "$(APPVERSION_M).$(APPVERSION_N).$(APPVERSION_P)"
 
+# The core (src/core.h and its .c files) and the games: everything in src/.
 APP_SOURCE_PATH += src
 
 # The dashboard icon (14x14, 1 bit). The Nano home-screen icon is generated from it by the SDK.

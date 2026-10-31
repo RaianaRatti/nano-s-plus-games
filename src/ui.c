@@ -1,4 +1,4 @@
-// The arcade's look: dark ink on a lit page, lower case, few words.
+// The look of both apps: dark ink on a lit page, lower case, few words.
 //
 //   y 0     the bar: a game's score (and lives) in small figures
 //   y 8     a lace edge under it
@@ -9,7 +9,7 @@
 // Drawing is on demand: a change calls ui_dirty() and the shell draws the screen once after the
 // event that changed it.
 
-#include "arcade.h"
+#include "core.h"
 
 static bool dirty;
 

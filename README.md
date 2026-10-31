@@ -138,9 +138,21 @@ reset when the app is reinstalled.
 ./scripts/emulate.sh tour     # a screenshot of every screen, in screenshots/
 ```
 
+## Also here: a pet and a gallery
+
+Two more apps are built from this repo, each installed separately with its own spot on the
+dashboard:
+
+- [**Mochi**](pet/README.md) is a little creature to raise, from an egg to a grown-up, with five
+  grown-up forms to collect. After everything you do for it, it tells you one of 150 physics facts,
+  which open into a full explanation: `./scripts/load.sh pet`
+- [**Curio**](gallery/README.md) is a pocket gallery of fourteen lesser-known works of art in
+  black and white, each with its artist and its story: `./scripts/load.sh gallery`
+
 ## How it works
 
 ```
+src/core.h      what the apps share (the files from main.c to random.c below); each app adds a shell
 src/main.c      the event loop. Every event goes to Ledger's OS first, so the PIN and lock screens
                 keep priority; then the arcade reads the raw button state.
 src/gfx.c       a 128 x 64, 1-bit framebuffer shown as one full-screen NBGL image, in a light
@@ -154,6 +166,10 @@ src/dodge.c     ported from BadgeOS apps/game/main.lua
 src/dice.c      ported from BadgeOS apps/dice/main.lua
 src/duel.c      ported from BadgeOS apps/duel/main.lua (hot-seat instead of radio)
 src/snake.c, pong.c, bricks.c, racer.c, cave.c, flip.c, runner.c   the arcade's own games
+src/random.c    the secure element's true random generator
+pet/            the pet app: its own Makefile, icon and sources, on the same core; its physics
+                facts are made by tools/make_facts.py
+gallery/        the gallery app, the same way; its pictures are made by tools/make_gallery.py
 ```
 
 The games run on the OS's 100 ms ticker (10 updates a second), and a button press is handled the

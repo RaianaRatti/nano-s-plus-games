@@ -4,7 +4,7 @@
 #include "os.h"
 #include "lcx_rng.h"
 
-#include "arcade.h"
+#include "core.h"
 
 uint32_t random_range(uint32_t low, uint32_t high)
 {

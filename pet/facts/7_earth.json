@@ -1,0 +1,184 @@
+{
+  "facts": [
+    {
+      "title": "the kilogram",
+      "fact": "Since 2019, the kilogram is set by quantum physics, not a metal lump near Paris.",
+      "more": [
+        "For 130 years, the kilogram was a cylinder of platinum and iridium kept in a vault near Paris. Every scale in the world was ultimately checked against it. But it seemed to change slowly, by about 50 micrograms compared to its copies, and nobody could say which ones were drifting.",
+        "Since 2019, the kilogram is defined by fixing the value of Planck's constant, the number at the heart of quantum physics. A Kibble balance weighs a mass against an electromagnetic force, measured with quantum effects in electronics, which ties the mass to Planck's constant.",
+        "Now all seven base units, like the metre and the second, are defined by constants of nature. In principle, aliens could rebuild our kilogram exactly from a description alone."
+      ]
+    },
+    {
+      "title": "the second",
+      "fact": "A second is exactly 9,192,631,770 waves of the light a caesium atom absorbs.",
+      "more": [
+        "Atoms of the same element are all identical, and a jump between two of their energy levels absorbs light of one precise frequency, the same everywhere and forever. That makes them perfect pendulums.",
+        "Since 1967, the second is defined by caesium-133: it lasts 9,192,631,770 cycles of the microwaves that make its outer electron flip its spin relative to the nucleus. An atomic clock locks a microwave source to that frequency, and counts.",
+        "The best caesium clocks would lose about a second in 300 million years. Newer optical clocks, ticking with visible light, are about a hundred times better, and the second will probably be redefined with them."
+      ]
+    },
+    {
+      "title": "antimatter storms",
+      "fact": "Thunderstorms fire beams of gamma rays into space, and even make antimatter.",
+      "more": [
+        "Inside a thundercloud, strong electric fields speed up free electrons until they move at nearly the speed of light. When they hit air molecules, they knock more electrons loose, which speed up too: an avalanche.",
+        "Those electrons make bursts of gamma rays, the most energetic kind of light, lasting about a thousandth of a second. They were discovered by accident in 1994, by a satellite built to watch for distant cosmic explosions.",
+        "Some of the gamma rays are energetic enough to turn into pairs of electrons and positrons. In 2011, the Fermi space telescope detected beams of positrons, antimatter, shot up into space from thunderstorms. Lightning itself heats the air to about 30,000 degrees, five times hotter than the Sun's surface."
+      ]
+    },
+    {
+      "title": "slippery ice",
+      "fact": "Nobody fully agrees why ice is slippery. The old textbook answer is wrong.",
+      "more": [
+        "For a long time, schools taught that the pressure of a skate's blade melts the ice under it, making a slippery film of water. But the numbers don't work: a skater's weight lowers the melting point by only a few hundredths of a degree, and ice is slippery even far below zero, when you're just standing on it.",
+        "Another idea is friction: rubbing warms the ice and melts it. That matters when you're moving fast. But a big part seems to be the surface itself: the top layers of molecules in ice are not locked into the crystal like those below, and behave somewhat like a liquid, even far below freezing.",
+        "Recent experiments suggest even this is not the whole story, and that how the surface molecules roll and tumble under a skate matters too. Something as everyday as skating is still being researched."
+      ]
+    },
+    {
+      "title": "static electricity",
+      "fact": "Rub a balloon on your hair and it sticks. Physicists still can't fully explain why.",
+      "more": [
+        "When two materials touch and separate, charge moves from one to the other. This triboelectric effect has been known since the ancient Greeks rubbed amber, whose Greek name, elektron, gave us the word electricity.",
+        "But what actually moves is surprisingly unclear. Sometimes it is electrons, sometimes charged ions, sometimes tiny bits of the material torn off. Even two pieces of the same material can charge each other, which simple theories say they shouldn't.",
+        "It matters: static sparks can ignite dust in factories, and charged grains of sand or ash make lightning in dust storms and volcanic plumes. The basic physics of something every child has tried is still being worked out."
+      ]
+    },
+    {
+      "title": "ball lightning",
+      "fact": "Ball lightning has been seen for centuries and filmed, but nobody can explain it.",
+      "more": [
+        "Witnesses describe glowing balls, from the size of a pea to a beach ball, floating near the ground during thunderstorms for several seconds, sometimes drifting through windows, before vanishing quietly or with a bang.",
+        "For a long time many scientists doubted it existed. In 2012, researchers in China, recording an ordinary storm, happened to film one and measure its light. It contained elements from soil, such as silicon, iron and calcium.",
+        "That supports one idea: lightning striking the ground vaporizes soil, and the hot vapor of silicon burns slowly in the air as a glowing ball. But it can't explain balls seen inside aircraft. There are dozens of other theories, and labs can make glowing balls, but none quite like the real thing."
+      ]
+    },
+    {
+      "title": "flipping poles",
+      "fact": "Earth's magnetic north and south poles have swapped places hundreds of times.",
+      "more": [
+        "Earth's magnetic field is made by molten iron swirling in its outer core, about 3,000 kilometres below us. Moving iron carries electric currents, which make magnetic fields, which steer the flowing iron: a self-sustaining dynamo.",
+        "The dynamo is chaotic, and every so often the field weakens and flips, so a compass would point south. The record is written in the rock of the ocean floor: as lava cools, its iron minerals freeze in the direction of the field at the time, leaving stripes of alternating magnetism.",
+        "The last full flip was about 780,000 years ago. Flips come irregularly, from tens of thousands to tens of millions of years apart, and take thousands of years. The field is weakening now, but nobody can say whether a flip is coming."
+      ]
+    },
+    {
+      "title": "aurora colors",
+      "fact": "The red of an aurora comes from oxygen atoms that wait nearly two minutes to glow.",
+      "more": [
+        "Auroras form when particles from the Sun, guided toward the poles by Earth's magnetic field, crash into the upper atmosphere and give their energy to its atoms.",
+        "Oxygen atoms give that energy off as green or red light. These are 'forbidden' transitions: so unlikely that the atom waits, almost a second for green and nearly two minutes for red, before it glows. In the denser air lower down, it would bump into another molecule first and lose its energy without any light.",
+        "That is why the red only glows very high up, above about 200 kilometres, where the air is thin enough to wait undisturbed, and the green a bit lower. Blue and purple come from nitrogen. For decades the green puzzled scientists, because no lab could make it."
+      ]
+    },
+    {
+      "title": "the butterfly effect",
+      "fact": "Weather can't be forecast more than about two weeks ahead, even with perfect computers.",
+      "more": [
+        "In 1961, Edward Lorenz reran a weather simulation, typing in a number rounded to three decimals instead of six. The tiny difference grew until the new forecast had nothing in common with the old one.",
+        "That is chaos. In some systems that follow exact laws, small differences grow exponentially, doubling again and again. A system can be completely determined by its laws and still unpredictable, because we can never measure its starting point perfectly.",
+        "In the atmosphere, small errors double every couple of days, which limits detailed forecasts to roughly two weeks. Lorenz described it by asking whether the flap of a butterfly's wings in Brazil could set off a tornado in Texas."
+      ]
+    },
+    {
+      "title": "turbulence",
+      "fact": "There's a million-dollar prize for proving that the equations of flowing water make sense.",
+      "more": [
+        "The Navier-Stokes equations describe how fluids like water and air flow. Engineers use them every day to design planes, ships and pipes, and they work beautifully.",
+        "But nobody has proved that their solutions always stay smooth: that a flow that starts smooth can never develop a point where the speed becomes infinite. It's one of the seven Millennium Prize problems, with a million dollars for a proof either way.",
+        "Part of the difficulty is turbulence: the chaotic swirls in a rushing river or rising smoke, eddies inside eddies at every size. Richard Feynman called turbulence the most important unsolved problem of classical physics."
+      ]
+    },
+    {
+      "title": "oklo",
+      "fact": "Two billion years ago, a natural nuclear reactor ran by itself in what is now Gabon.",
+      "more": [
+        "In 1972, workers at a French plant processing uranium ore from Oklo, in Gabon, noticed that some of it held slightly too little uranium-235, the kind that splits in reactors. It was as if part of it had already been used.",
+        "It had. Two billion years ago, natural uranium contained much more uranium-235 than today, about as much as reactor fuel. Where groundwater seeped into rich deposits, it slowed down neutrons enough to start a chain reaction.",
+        "The reactors ran on and off for hundreds of thousands of years, in cycles: the heat boiled the water away, which stopped the reaction, until water seeped back. Their leftovers have been used to check that constants of nature, like the fine-structure constant, haven't changed since."
+      ]
+    },
+    {
+      "title": "half-lives",
+      "fact": "Each radioactive atom decays at a random moment, yet a lump of them is a precise clock.",
+      "more": [
+        "A radioactive nucleus has no memory and no age. A carbon-14 atom that has existed for 10,000 years is exactly as likely to decay in the next second as one made yesterday. When it goes is truly random, as far as physics knows.",
+        "But with trillions of atoms, the randomness averages out: in 5,730 years half of them decay, in the next 5,730 years half of the rest, and so on. That half-life barely changes, whatever the heat, pressure or chemistry.",
+        "Living things take in carbon-14, made in the air by cosmic rays, and stop when they die. Measuring how much is left in a bone or a piece of wood tells how long ago it died, back to about 50,000 years. Uranium, with half-lives of billions of years, dates the Earth itself: 4.5 billion years."
+      ]
+    },
+    {
+      "title": "mri",
+      "fact": "An MRI scanner makes pictures by tipping over the tiny magnets in your hydrogen atoms.",
+      "more": [
+        "The nucleus of a hydrogen atom, a single proton, has spin, which makes it a tiny magnet. Your body is mostly water, so it's packed with them.",
+        "In the strong field of an MRI scanner, the protons line up slightly and wobble around the field like spinning tops, at a rate set by the field's strength. A pulse of radio waves at exactly that rate tips them over. When it stops, they swing back and send out a faint radio signal.",
+        "How fast they settle depends on the tissue they're in, which gives the contrast between, say, fat and muscle. Varying the field across the body makes the protons in each spot wobble at a slightly different rate, so the signal can be mapped in 3D. No X-rays, only spins."
+      ]
+    },
+    {
+      "title": "electron waves",
+      "fact": "Electron microscopes see atoms because electrons are waves too, far shorter than light.",
+      "more": [
+        "A microscope can't show details smaller than about half the wavelength of the light it uses. Visible light waves are around 500 nanometres long, and atoms are thousands of times smaller, so light can never show them.",
+        "In 1924, Louis de Broglie proposed that every particle is also a wave, and the faster it moves, the shorter its wavelength. Electrons sped up by a high voltage have wavelengths far smaller than an atom.",
+        "So electron microscopes focus beams of electrons, with magnets as lenses. The best can see individual atoms, and with a version called cryo-electron microscopy, biologists see the shapes of single proteins, which won the 2017 Nobel Prize in Chemistry."
+      ]
+    },
+    {
+      "title": "the planck length",
+      "fact": "Below a length called the Planck length, our ideas of space and time stop working.",
+      "more": [
+        "Combine three constants of nature, the speed of light, the strength of gravity and Planck's constant from quantum physics, and you get a length: about 1.6 x 10^-35 metres, a hundred billion billion times smaller than a proton.",
+        "At that size, the uncertainty principle says the energy packed into a region would be so great that it would make a tiny black hole. So measuring anything smaller seems impossible, and there general relativity, which treats space as smooth, clashes completely with quantum physics.",
+        "It's not proven that space is made of little pixels of this size. It is the scale where we need a theory of quantum gravity, such as string theory or loop quantum gravity, and no experiment can reach it yet."
+      ]
+    },
+    {
+      "title": "the hologram idea",
+      "fact": "What a black hole holds depends on its area, not its volume. Space may be a hologram.",
+      "more": [
+        "Normally, how much information you can store in a region grows with its volume: make it twice as big in each direction and you get eight times the room. Black holes break that rule.",
+        "In the 1970s, Jacob Bekenstein and Stephen Hawking showed that a black hole has entropy, a measure of hidden information, in proportion to the area of its horizon: about one bit for every few squared Planck lengths. And a black hole is the most information that can ever be squeezed into a region.",
+        "This suggests that everything inside a region of space might be fully described by information on its boundary, like a 3D image stored on a flat hologram. In some model universes, physicists have shown exactly that. It is one of the most studied ideas in quantum gravity."
+      ]
+    },
+    {
+      "title": "the bird compass",
+      "fact": "Birds may sense the Earth's magnetic field with linked electrons in their eyes.",
+      "more": [
+        "Many migrating birds can tell direction from Earth's magnetic field, even on cloudy nights. But the field is very weak, far too weak to tug noticeably on any ordinary molecule. How they do it is still being worked out.",
+        "The leading idea involves a protein in their eyes called cryptochrome. When blue light hits it, it makes a pair of electrons on two different molecules whose spins are linked, a radical pair. The Earth's field slightly changes how the pair's spins evolve, which changes the chemicals the protein ends up making.",
+        "If this is right, birds use a delicate quantum effect in a warm, wet body, which many thought impossible. Weak radio noise disrupts the compass of robins, as the theory predicts, but the full story isn't proven yet."
+      ]
+    },
+    {
+      "title": "the coriolis myth",
+      "fact": "Sinks do not drain the other way in the other hemisphere. That's a myth.",
+      "more": [
+        "The Earth's spin makes moving things seem to curve: to the right in the north, to the left in the south. This Coriolis effect is why hurricanes spin opposite ways in the two hemispheres.",
+        "But it is very weak over small distances and short times. In a sink, the way the water was poured, the shape of the basin and leftover currents matter thousands of times more than the Earth's rotation.",
+        "In careful experiments with a big round tank left to settle for a day, the Coriolis effect does win, as shown in 1962 in the US and in 1965 in Australia. A Foucault pendulum, a heavy weight on a long wire, shows the same effect, slowly turning its swing during the day."
+      ]
+    },
+    {
+      "title": "electron drift",
+      "fact": "When you switch on a light, the electrons in the wire crawl slower than a snail.",
+      "more": [
+        "Flip a switch and the lamp lights almost instantly, so you might think electrons race through the wire. They don't. In a household wire, they drift at less than a millimetre per second, and with alternating current, they just jiggle back and forth.",
+        "What travels fast is the push: the electromagnetic field, which spreads along the wire at a large fraction of the speed of light. The wire is already full of electrons, and the field nudges all of them almost at once, like water in a full hose that flows out the moment you open the tap.",
+        "In fact, the energy doesn't travel inside the wire at all, but in the electric and magnetic fields in the space around it, which the wire guides."
+      ]
+    },
+    {
+      "title": "microwave ovens",
+      "fact": "Microwave ovens don't work by matching a special vibration of water. That's a myth.",
+      "more": [
+        "It is often said that microwaves are tuned to water's resonant frequency. In fact, ovens run at 2.45 gigahertz, far below water's strongest absorption, which is at much higher frequencies.",
+        "Water molecules are lopsided: one end slightly negative, the other slightly positive. The microwave's electric field flips billions of times a second, and the molecules keep trying to twist to follow it, jostling their neighbours and turning that motion into heat. Many frequencies would work.",
+        "2.45 GHz was chosen partly because that band was left free for such uses, and because it isn't absorbed too strongly, so the waves soak a few centimetres into the food instead of only heating its surface. In ice, the molecules can't twist freely, which is why defrosting is slow."
+      ]
+    }
+  ]
+}

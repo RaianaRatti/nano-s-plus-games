@@ -1,0 +1,139 @@
+{
+  "facts": [
+    {
+      "title": "slow light",
+      "fact": "In 1999, light was slowed to the speed of a bicycle in a cloud of ultracold atoms.",
+      "more": [
+        "In a vacuum, light covers 300,000 kilometres a second. In glass or water it is somewhat slower. In 1999, Lene Hau's team sent a pulse of laser light into a Bose-Einstein condensate of sodium atoms, and it crept through at 17 metres per second.",
+        "The trick, called electromagnetically induced transparency, uses a second laser to make the cloud transparent in a very narrow range of colors. There, the light's energy is handed back and forth with the atoms as it goes, which holds the pulse back.",
+        "In 2001, the team stopped a pulse completely, stored it in the atoms, and later sent it on its way again. Storing light like this could be useful as memory for quantum computers."
+      ]
+    },
+    {
+      "title": "the blue sky",
+      "fact": "The sky scatters violet light even more than blue. So why isn't it violet?",
+      "more": [
+        "Sunlight is all the colors mixed. The tiny molecules of the air scatter short wavelengths much more than long ones: blue several times more than red. That scattered light reaches you from every part of the sky, which is why the sky is blue. This is Rayleigh scattering.",
+        "Violet has an even shorter wavelength, so it scatters even more. But sunlight has less violet than blue to begin with, some of it is absorbed high in the atmosphere, and our eyes are much less sensitive to it.",
+        "Our eyes have three kinds of color sensors, and the mix of light from the sky sets them off in a way the brain reads as sky blue. At sunset, the light crosses so much air that most of the blue is scattered away before it reaches you, leaving reds and oranges."
+      ]
+    },
+    {
+      "title": "solar sails",
+      "fact": "Light has no mass, but it pushes. A spaceship can sail on sunlight alone.",
+      "more": [
+        "A photon has no mass, but it does carry momentum, so when it bounces off a mirror it gives the mirror a tiny push. At Earth's distance, sunlight pushes on a square metre of mirror with about the weight of a grain of sand.",
+        "That is tiny, but it never stops, and in space there is no friction. In 2010, Japan's IKAROS probe unfurled a sail 20 metres across, thinner than a hair, and used sunlight to speed up and steer on its way past Venus.",
+        "The pressure of light also pushes the dust tails of comets away from the Sun, and helps hold up the outer layers of the biggest stars."
+      ]
+    },
+    {
+      "title": "optical tweezers",
+      "fact": "Lasers can hold and move single living cells, using the push and pull of light.",
+      "more": [
+        "When light passes through a transparent bead, it is bent, and bending light changes its momentum. By Newton's third law, the bead feels a push the other way.",
+        "Focus a laser beam tightly, and the light bending through a nearby bead always ends up pulling it toward the brightest point, the focus. The bead is caught in optical tweezers, and moving the beam moves the bead.",
+        "Arthur Ashkin invented them, and won the 2018 Nobel Prize at the age of 96. Biologists use them to hold bacteria without harming them, stretch single DNA molecules, and measure the steps of tiny molecular motors, a few nanometres at a time."
+      ]
+    },
+    {
+      "title": "haidinger's brush",
+      "fact": "You can learn to see whether light is polarized: look for a faint yellow bow tie.",
+      "more": [
+        "Light is a wave of electric and magnetic fields, and the direction in which its electric field wiggles is its polarization. Light from an LCD screen, and from the blue sky away from the Sun, is partly polarized. Bees and many other animals navigate by it.",
+        "Humans seem blind to it, but not quite. Look at a plain white area on an LCD screen and tilt your head slowly from side to side. Many people notice a faint yellowish bow-tie shape at the very centre of their vision, turning as they tilt. This is Haidinger's brush, described in 1844.",
+        "It comes from pigment molecules at the centre of the retina, arranged in rings, which absorb blue light polarized one way more than the other."
+      ]
+    },
+    {
+      "title": "optical fibers",
+      "fact": "Light can be trapped inside a glass thread and sent across an ocean.",
+      "more": [
+        "When light tries to leave glass at a shallow angle, it can't: it bounces back in, completely. This total internal reflection traps light inside a thin glass fiber, which carries it along, even around bends.",
+        "Fiber glass is so pure that you could see through kilometres of it. Light still fades a little, so undersea cables have amplifiers every 50 to 100 kilometres: short pieces of fiber containing the element erbium, which a laser energizes to boost the signal.",
+        "Almost all internet traffic between continents goes through such cables on the sea floor, not satellites. A single fiber can carry trillions of bits per second, as many colors of light at once."
+      ]
+    },
+    {
+      "title": "structural color",
+      "fact": "A morpho butterfly's blue contains no blue pigment. It is made of shapes, not dyes.",
+      "more": [
+        "Most colors come from pigments, molecules that absorb some colors of light and reflect the rest. A morpho butterfly's wings are covered in scales with tiny ridges, layered like little Christmas trees, spaced about as far apart as a wavelength of light.",
+        "Light reflected from each layer interferes with the light from the others. For blue, the reflections line up and add up; for other colors, they cancel. The same thing makes the colors of soap bubbles and peacock feathers.",
+        "Because it is made of shape, not chemicals, a structural color doesn't fade. Soak the wing in a liquid that fills the gaps, and the blue changes or vanishes, because the spacing that made it is gone."
+      ]
+    },
+    {
+      "title": "holograms",
+      "fact": "A hologram records not only how bright light is, but also how its waves line up.",
+      "more": [
+        "A photograph records how bright the light is at each point, which isn't enough to rebuild a 3D scene. Light also has phase: where each wave is in its up-and-down cycle, which depends on how far it has travelled.",
+        "To record a hologram, laser light is split in two: one beam lights the object, the other goes straight to the film. Where they meet, they interfere, and the film records a pattern of fine stripes that encodes the phase.",
+        "Shine a laser back through the film and the stripes bend the light into the very same waves that came from the object. Your eyes can't tell the difference, so you see the object in 3D, and moving your head shows its sides. Cut the hologram in half and each half still shows the whole scene."
+      ]
+    },
+    {
+      "title": "photoelectric effect",
+      "fact": "Einstein's Nobel Prize wasn't for relativity. It was for showing light comes in particles.",
+      "more": [
+        "Shine light on certain metals and electrons fly out: the photoelectric effect. The puzzle was that dim blue light knocked electrons out, while bright red light, with far more energy overall, knocked out none.",
+        "In 1905, Einstein explained it: light comes in packets, now called photons, whose energy depends only on their color. A blue photon has enough energy to free an electron by itself. A red one doesn't, and a million red photons can't team up to do it.",
+        "That idea helped start quantum physics and won the 1921 Nobel Prize. Your phone's camera works on the same principle: each pixel counts the electrons freed by the photons that hit it."
+      ]
+    },
+    {
+      "title": "the uv catastrophe",
+      "fact": "Old physics said a hot oven should glow with infinite energy. Quanta fixed it.",
+      "more": [
+        "Everything warm glows: you give off infrared, a stove ring glows red, the Sun white. Around 1900, physicists tried to calculate the mix of colors in this glow, called black-body radiation.",
+        "Classical physics predicted the glow should get brighter and brighter at shorter wavelengths, without end, so any hot object would blast out infinite ultraviolet energy. That obviously doesn't happen. It became known as the ultraviolet catastrophe.",
+        "In 1900, Max Planck found a formula that matched experiments perfectly, but only by assuming that energy is given out in small packets, quanta, whose size grows with frequency. Planck took it as a mathematical trick. It was the beginning of quantum physics."
+      ]
+    },
+    {
+      "title": "rainbows",
+      "fact": "No two people see the same rainbow. Each sees light from a different set of raindrops.",
+      "more": [
+        "A rainbow forms when sunlight enters raindrops, reflects off the back of them and comes out again, split into colors, because each color bends by a slightly different amount.",
+        "Each drop sends red light out at about 42 degrees from the direction of the sunlight, and violet at about 40. So you see red from all the drops 42 degrees away from the point directly opposite the Sun: a circle around the shadow of your own head. The person next to you sees a circle around theirs, made by other drops.",
+        "Light bouncing twice inside the drops makes a fainter second bow outside the first, with its colors reversed. Between the two, the sky is darker: a band named after Alexander of Aphrodisias, who described it 1,800 years ago."
+      ]
+    },
+    {
+      "title": "mirages",
+      "fact": "A mirage is not a trick of the mind. It's a real image that you can photograph.",
+      "more": [
+        "Light travels slightly faster through hot, thin air than through cool, dense air. So when it passes through layers of different temperatures, it bends, curving toward the cooler air.",
+        "Over a hot road, the air right at the surface is much hotter than the air above. Light from the sky heading down toward the road curves back up into your eyes, so you see a patch of sky on the road ahead, which looks like water. A camera sees it too.",
+        "Over cold water, the opposite happens: ships beyond the horizon can appear in the sky, stretched into towers. This kind of mirage, the Fata Morgana, may explain old tales of ghost ships."
+      ]
+    },
+    {
+      "title": "squeezed light",
+      "fact": "To hear gravitational waves, LIGO had to quiet the jitter of empty space itself.",
+      "more": [
+        "LIGO measures changes in length smaller than a thousandth of a proton, with laser light bouncing between mirrors 4 kilometres apart. At that level, even the light is a problem: photons arrive at random moments, like rain on a roof, which makes a faint hiss.",
+        "The uncertainty principle sets a limit on that noise, but only on the product of two things: the jitter in the light's brightness and the jitter in its timing, its phase. You can make one smaller, if you accept more of the other.",
+        "Since 2019, LIGO feeds in squeezed light: a special state of the vacuum whose timing jitter is smaller than normal, with the extra uncertainty pushed into brightness. It lets the detectors hear further into space, and catch more black holes colliding."
+      ]
+    },
+    {
+      "title": "attosecond flashes",
+      "fact": "Flashes of light lasting a billionth of a billionth of a second can film electrons moving.",
+      "more": [
+        "To photograph something fast, you need a short flash. Electrons move in atoms over attoseconds: billionths of a billionth of a second. There are more attoseconds in one second than there have been seconds since the Big Bang.",
+        "Visible light can't make a flash that short, since a single one of its waves lasts longer. Physicists found a way to make bursts of extreme ultraviolet light lasting a few hundred attoseconds, by hitting a gas with an intense laser that tears electrons away and slams them back into their atoms.",
+        "With these flashes, it is possible to watch electrons move in atoms and molecules, and time how long one takes to escape. The method won the 2023 Nobel Prize."
+      ]
+    },
+    {
+      "title": "magenta",
+      "fact": "Magenta is not in the rainbow. No single wavelength of light looks like it.",
+      "more": [
+        "Each pure color in a rainbow is light of one wavelength, from red at the long end to violet at the short end. Your eye senses color with three kinds of cone cells, roughly for red, green and blue.",
+        "Pure yellow light stimulates the red and green cones together. So does a mix of red and green light, and your brain can't tell the difference. That is how screens make every color from just three.",
+        "Magenta is what you see when the red and blue cones are stimulated but not the green. No single wavelength can do that, since red and blue are at opposite ends of the rainbow. So magenta is a color the brain invents, closing the rainbow into a circle."
+      ]
+    }
+  ]
+}

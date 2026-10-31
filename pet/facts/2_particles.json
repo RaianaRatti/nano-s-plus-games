@@ -1,0 +1,184 @@
+{
+  "facts": [
+    {
+      "title": "the higgs field",
+      "fact": "The Higgs field gives particles their mass, yet it explains only about 1% of yours.",
+      "more": [
+        "Space is filled with the Higgs field. Particles like electrons and quarks interact with it, and that is what gives them mass: the stronger the interaction, the heavier the particle. A ripple in the field, the Higgs boson, was found at CERN in 2012.",
+        "But the quarks in your protons and neutrons are very light. Together they make up only about 1 percent of a proton's mass, and electrons are lighter still.",
+        "The rest is energy. The quarks are held together by gluons in a furious, ever-changing swarm, and by Einstein's E = mc^2, that energy weighs. So almost all of your weight is the energy of the strong force, trapped inside the nuclei of your atoms."
+      ]
+    },
+    {
+      "title": "confinement",
+      "fact": "You can never pull a quark out of a proton. Try, and you make new quarks instead.",
+      "more": [
+        "Protons and neutrons are made of three quarks each, held by the strong force, which is carried by particles called gluons. Unlike gravity or magnetism, this force does not get weaker as the quarks move apart.",
+        "Pull two quarks apart and the field between them forms a narrow tube, like a stretched rubber band, holding more and more energy. Long before a quark gets free, there is enough energy in the band to make a new quark and antiquark (E = mc^2 again). The band snaps, and each end grabs one of the new quarks.",
+        "So you end up with two particles made of quarks, never a lone quark. Nobody has ever seen one alone. Proving mathematically why the theory behaves like this is part of one of the Millennium Prize problems, worth a million dollars."
+      ]
+    },
+    {
+      "title": "neutrinos",
+      "fact": "About 60 billion neutrinos from the Sun pass through your fingertip every second.",
+      "more": [
+        "Neutrinos are particles with no charge and an incredibly small mass, made in nuclear reactions. The Sun's core makes enormous numbers of them: about 60 billion pass through each square centimetre of you every second, day and night. At night, they come up through the Earth.",
+        "They almost never hit anything. They only feel the weak force and gravity, so a neutrino could cross a light-year of solid lead and probably come out the other side.",
+        "To catch a few, detectors use thousands of tons of water or ice, deep underground, and wait. IceCube, at the South Pole, watches a whole cubic kilometre of Antarctic ice."
+      ]
+    },
+    {
+      "title": "neutrino flavors",
+      "fact": "Neutrinos change identity as they fly, which proved that they have mass.",
+      "more": [
+        "Neutrinos come in three kinds, or flavors: electron, muon and tau. For decades, detectors caught only about a third of the electron neutrinos expected from the Sun. Either the Sun was misunderstood, or the neutrinos were going somewhere.",
+        "They were changing. A neutrino of one flavor is really a quantum blend of three states with slightly different masses. As it travels, those states drift out of step and the blend shifts, so an electron neutrino can arrive as a muon or tau neutrino, and later turn back.",
+        "That is only possible if neutrinos have mass, which the standard theory of particles said they didn't. The discovery won the 2015 Nobel Prize. We still don't know their exact masses, only that they are more than a million times lighter than an electron."
+      ]
+    },
+    {
+      "title": "antimatter",
+      "fact": "Every particle has an antimatter twin, and a banana gives off a little antimatter.",
+      "more": [
+        "For each kind of particle there is an antiparticle with the same mass and the opposite charge. The electron's twin is the positron. When a particle meets its antiparticle, both vanish in a flash of energy.",
+        "Antimatter is not only made in labs. A banana contains a little radioactive potassium-40, and about one decay in a hundred thousand gives off a positron: one every hour or two. It meets an electron at once and turns into two gamma rays.",
+        "Hospitals use this in PET scans. A sugar labelled with a substance that gives off positrons is injected, the cells using the most sugar light up, and the pairs of gamma rays, flying out in opposite directions, show exactly where."
+      ]
+    },
+    {
+      "title": "why matter won",
+      "fact": "The Big Bang should have made as much antimatter as matter. Why did matter win?",
+      "more": [
+        "Energy turns into matter in pairs: one particle and one antiparticle. So the hot early universe should have made the same amount of each, and as it cooled, they should have destroyed each other completely, leaving nothing but light.",
+        "Instead, for every billion or so pairs, there was one extra particle of matter. Everything in the universe today, stars, planets and you, is made of those leftovers.",
+        "Physicists have measured small differences in how matter and antimatter behave, in particles called kaons and B mesons, but they are far too small to explain the leftovers. Finding the real cause is one of the biggest open questions in physics."
+      ]
+    },
+    {
+      "title": "the weak force",
+      "fact": "The weak force can turn one particle into another. Without it, the Sun wouldn't shine.",
+      "more": [
+        "Of the four forces of nature, the weak force is the odd one. It doesn't just push or pull: it can change a particle's identity, turning a neutron into a proton, or the reverse.",
+        "The Sun needs this. Its fuel is protons, but helium needs neutrons too, so in the first step of fusion two protons meet and one of them must turn into a neutron by the weak force. That is so unlikely that a proton in the Sun's core waits billions of years, on average, for it to happen.",
+        "That slowness is lucky: it is why the Sun burns steadily for ten billion years instead of exploding at once. The weak force is carried by the heavy W and Z particles, which is why it only reaches across a tiny fraction of a proton's width."
+      ]
+    },
+    {
+      "title": "weak gravity",
+      "fact": "Gravity is so weak that a little fridge magnet beats the pull of the whole Earth.",
+      "more": [
+        "Gravity holds planets in orbit and galaxies together, so it seems powerful. But that is only because it adds up: every bit of mass pulls, and nothing ever cancels it.",
+        "Compare it to the others. The electric push between two electrons is about 10^42 times stronger than their gravitational pull: a one followed by 42 zeros. A tiny magnet holds a paper clip up against the entire planet pulling it down.",
+        "Why gravity is so much weaker than the other forces is a deep puzzle, tied to what physicists call the hierarchy problem. Some ideas say gravity leaks into extra dimensions we can't see. So far, there is no evidence for them, and nobody knows."
+      ]
+    },
+    {
+      "title": "the round electron",
+      "fact": "The electron is the roundest thing anyone has ever measured.",
+      "more": [
+        "If the electron's charge were slightly lopsided, with a bit more at one end than the other, it would twist in an electric field. Many theories that go beyond today's physics predict such a lopsidedness, called an electric dipole moment.",
+        "Experiments look for it by watching electrons inside molecules, where the electric fields are enormous, and checking whether their spins wobble. None has been seen. If an electron were blown up to the size of the solar system, any lopsidedness would have to be thinner than a human hair.",
+        "Each non-result rules out ideas, such as some versions of supersymmetry, that would have made the electron less round. A tabletop experiment, testing physics at energies beyond the biggest particle collider."
+      ]
+    },
+    {
+      "title": "oh-my-god particle",
+      "fact": "In 1991, one particle from space hit the air with the energy of a thrown baseball.",
+      "more": [
+        "Cosmic rays are particles, mostly protons, that rain on the Earth from space at nearly the speed of light. When one hits the top of the atmosphere, it shatters into a shower of billions of particles spread over kilometres, and detectors on the ground catch the shower.",
+        "On 15 October 1991, the Fly's Eye detector in Utah saw a shower from a particle with about 3 x 10^20 electronvolts: around 50 joules, the energy of a baseball at about 90 kilometres an hour, in one subatomic particle. It was nicknamed the Oh-My-God particle.",
+        "That is tens of millions of times more than the LHC gives a proton. Nobody knows what in the universe can accelerate particles that much. In 2021, another one, named Amaterasu, came from a direction where there seems to be nothing at all."
+      ]
+    },
+    {
+      "title": "cherenkov light",
+      "fact": "Particles can outrun light in water. The result is a blue glow, a sonic boom of light.",
+      "more": [
+        "Nothing goes faster than light in a vacuum. But light slows down in water, to about three quarters of its top speed, and particles from a nuclear reactor can go faster than that.",
+        "A charged particle moving through water disturbs the molecules it passes, and they give off light. Normally those little waves cancel out. But when the particle outruns the light, the waves pile up into a cone, like the shock wave of a plane flying faster than sound.",
+        "That is Cherenkov radiation, the eerie blue glow in the water around a reactor core. Neutrino detectors use it too: a neutrino that does hit something makes a fast particle, whose cone of light reveals which way it came."
+      ]
+    },
+    {
+      "title": "left and right",
+      "fact": "Nature can tell left from right. In 1956 an experiment caught it doing so.",
+      "more": [
+        "For a long time physicists assumed that the laws of nature work the same in a mirror: anything that can happen, its mirror image could happen just as well.",
+        "In 1956, Chien-Shiung Wu tested it with radioactive cobalt-60, cooled close to absolute zero and lined up in a magnetic field. If nature didn't care about mirrors, the electrons from its decay would fly out equally along and against the spin of the nuclei. They didn't: they preferred one direction.",
+        "The weak force breaks mirror symmetry. It only acts on particles spinning one way relative to their motion, the left-handed ones. Every neutrino ever seen is left-handed, and every antineutrino right-handed. Why nature is built like this, nobody knows."
+      ]
+    },
+    {
+      "title": "noether's theorem",
+      "fact": "Energy is conserved because the laws of physics don't change over time.",
+      "more": [
+        "In 1918, Emmy Noether published one of the deepest results in physics: every symmetry of nature comes with something that is conserved.",
+        "If an experiment works the same today as tomorrow (the laws don't change with time), energy is conserved. If it works the same here as a metre to the left (they don't change from place to place), momentum is conserved. If it works the same facing any direction, spin, or angular momentum, is conserved.",
+        "So conservation laws are not separate rules: they are what symmetries look like. That explains a surprise, too. The expanding universe does change over time, so there energy isn't simply conserved, which is why light from distant galaxies loses energy as it is stretched."
+      ]
+    },
+    {
+      "title": "the neutron puzzle",
+      "fact": "A lone neutron falls apart in about 15 minutes, but two ways of timing it disagree.",
+      "more": [
+        "Inside a nucleus, a neutron can last forever. Alone, it decays in under a quarter of an hour into a proton, an electron and an antineutrino. How long it lasts matters, for example to work out how much helium the Big Bang made.",
+        "One way to time it is to trap very cold neutrons in a 'bottle' and count how many are left after a while: about 878 seconds. Another is to send a beam of neutrons through a trap and count the protons they make: about 888 seconds.",
+        "Ten seconds sounds small, but both methods are precise enough that the gap shouldn't exist. Either one of them has an error nobody has found, or some neutrons decay in a way we don't know about, perhaps into something invisible."
+      ]
+    },
+    {
+      "title": "the number 137",
+      "fact": "A pure number, about 1/137, sets how strongly light and matter interact.",
+      "more": [
+        "Most numbers in physics depend on units like metres and seconds. The fine-structure constant doesn't. It combines the electron's charge, the speed of light and Planck's constant into a pure number, about 1/137, the same for aliens using any units at all.",
+        "It sets how strongly electrons and light pull on each other, and so the size of atoms, the colors they give off, and all of chemistry. If it were a few percent different, stars might not be able to make carbon, and there might be no us.",
+        "Nobody knows why it has this value. Wolfgang Pauli was fascinated by 137, and the story goes that Pauli died in hospital room 137. No theory has ever derived the number from anything deeper."
+      ]
+    },
+    {
+      "title": "the best prediction",
+      "fact": "One theory predicts how magnetic the electron is, matching experiment to 12 digits.",
+      "more": [
+        "Quantum electrodynamics, or QED, is the quantum theory of light and electrons. Among many other things, it predicts how strong a magnet the electron is, because of its spin.",
+        "The simplest calculation gives exactly 2, in natural units. But QED says the electron is surrounded by a fizz of short-lived particles appearing and vanishing in the empty space around it, and each adds a tiny correction. Physicists have calculated over ten thousand of them.",
+        "The result, about 2.00231930436, matches the measurement to about one part in a trillion. Richard Feynman, who helped build QED, compared it to measuring the width of America to within a hair, and called QED the jewel of physics."
+      ]
+    },
+    {
+      "title": "the false vacuum",
+      "fact": "Our universe may be only temporarily stable, like a ball resting in a dip on a hillside.",
+      "more": [
+        "The Higgs field fills space with a certain value, which sets the masses of the particles. Measurements of the Higgs boson and the top quark suggest this might not be the lowest possible value, just a local dip: a false vacuum.",
+        "If so, a bubble of the true vacuum could one day appear somewhere by quantum tunneling, and grow at nearly the speed of light, changing the laws of chemistry inside it.",
+        "Don't worry. Calculations put the chance of that at essentially zero for far longer than the age of the universe. And it depends on physics we may not know yet, which could make our vacuum perfectly stable."
+      ]
+    },
+    {
+      "title": "antimatter falls",
+      "fact": "In 2023, antimatter atoms were dropped for the first time. They fell down, like matter.",
+      "more": [
+        "Antimatter has the opposite charge of matter, so you might wonder if it has opposite gravity too, and falls up. Almost every physicist expected it to fall down, but nobody had checked: antimatter is hard to make, and gravity is so weak that the slightest electric field would swamp it.",
+        "At CERN, the ALPHA experiment made antihydrogen, a positron around an antiproton, which has no overall charge. It held the atoms with magnets in a tall tube, slowly let them go, and counted how many escaped through the top and the bottom.",
+        "Most came out of the bottom: antimatter falls down, at close to the same rate as matter. More precise tests are on the way, looking for even a slight difference."
+      ]
+    },
+    {
+      "title": "quark-gluon plasma",
+      "fact": "Smashing gold nuclei together made a liquid of quarks, the hottest stuff ever made.",
+      "more": [
+        "For the first millionths of a second after the Big Bang, the universe was too hot for protons and neutrons to exist. Their quarks and gluons roamed freely, in a soup called quark-gluon plasma.",
+        "Colliders recreate it by smashing heavy nuclei, like gold or lead, together at nearly the speed of light. For a tiny instant, the collision reaches trillions of degrees: in 2012, the LHC reached about 5 trillion degrees, a record.",
+        "Physicists expected a gas. Instead the plasma flows like a liquid, with nearly the least internal friction that quantum physics allows: one of the most perfect liquids known."
+      ]
+    },
+    {
+      "title": "proton decay",
+      "fact": "Protons may not last forever. We have watched for decades and seen none decay.",
+      "more": [
+        "Many theories that unify the forces of nature predict that protons, the heart of every atom, should very rarely decay into lighter particles.",
+        "To test it, Super-Kamiokande in Japan watches 50,000 tons of ultra-pure water deep in a mine: about 10^34 protons. If protons lasted 10^34 years on average, a few would decay every year. None has been seen.",
+        "So protons, if they decay at all, last over 10^34 years, a trillion trillion times the age of the universe. That ruled out the simplest unified theories. Bigger detectors, like Hyper-Kamiokande, are being built to keep looking."
+      ]
+    }
+  ]
+}

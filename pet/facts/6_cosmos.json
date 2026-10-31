@@ -1,0 +1,238 @@
+{
+  "facts": [
+    {
+      "title": "hawking radiation",
+      "fact": "Black holes are not completely black. They glow faintly and slowly evaporate.",
+      "more": [
+        "In 1974, Stephen Hawking combined quantum physics with general relativity at the edge of a black hole, and found something nobody expected: a black hole should give off a faint glow of particles, as if it had a temperature.",
+        "The bigger the black hole, the colder the glow. For one the mass of the Sun, it is about 60 billionths of a degree above absolute zero: far colder than space, so it takes in more than it gives off. Hawking radiation has never been detected.",
+        "But in the far future, as the universe cools, black holes will slowly lose mass this way and evaporate, ending in a final flash. For one like the Sun, that takes about 10^67 years. What happens to everything that fell in is one of the deepest puzzles in physics: the information paradox."
+      ]
+    },
+    {
+      "title": "neutron stars",
+      "fact": "A teaspoon of neutron star would weigh about a billion tons on Earth.",
+      "more": [
+        "When a star much heavier than the Sun runs out of fuel, its core collapses in under a second. Electrons are pressed into protons, making neutrons, and the core shrinks to a ball about 20 kilometres across with more mass than the Sun.",
+        "It is held up only by the neutrons refusing to be squeezed into the same states: the Pauli exclusion principle again. It is as dense as an atomic nucleus. A sugar cube of it would weigh about as much as all the people on Earth together.",
+        "Shrinking makes it spin faster, like a skater pulling in their arms: the fastest known neutron star turns 716 times a second. Its gravity is so strong that its tallest mountains are thought to be less than a millimetre high."
+      ]
+    },
+    {
+      "title": "pulsars",
+      "fact": "Some dead stars tick as steadily as atomic clocks.",
+      "more": [
+        "A pulsar is a spinning neutron star that sweeps beams of radio waves across space, like a lighthouse. Jocelyn Bell Burnell discovered the first one in 1967, as a student. Its pulses were so regular that the team half-jokingly labelled it LGM-1, for little green men.",
+        "The fastest, millisecond pulsars, spin hundreds of times a second, and over years their ticks are so steady that they rival atomic clocks.",
+        "In 2023, after timing dozens of them for 15 years, astronomers announced tiny shared wobbles in their ticks: evidence of a background of slow gravitational waves rolling through our galaxy, probably from pairs of giant black holes orbiting each other across the universe."
+      ]
+    },
+    {
+      "title": "dark matter",
+      "fact": "Galaxies spin so fast they should fly apart. Something invisible holds them together.",
+      "more": [
+        "In the solar system, the far planets orbit slowly, because most of the mass is in the centre. Galaxies were expected to work the same way, with their outer stars slower. In the 1970s, Vera Rubin measured them, and found the outer stars move about as fast as the inner ones.",
+        "So there must be far more mass than we see, spread in a halo around each galaxy. This dark matter gives off and absorbs no light, but its gravity shows up everywhere: in clusters of galaxies, in gravitational lensing, in the pattern of the cosmic microwave background.",
+        "There is about five times as much dark matter as ordinary matter. Nobody knows what it is. Huge detectors deep underground wait for a dark matter particle to bump into an atom. None has, so far."
+      ]
+    },
+    {
+      "title": "dark energy",
+      "fact": "The expansion of the universe is speeding up, pushed by what we call dark energy.",
+      "more": [
+        "After the Big Bang, gravity should have been slowing the expansion of the universe. In 1998, two teams measured by how much, using exploding stars whose brightness tells their distance.",
+        "Instead, distant supernovae were fainter than expected: the expansion has been speeding up for the last few billion years. The discovery won the 2011 Nobel Prize.",
+        "Whatever drives it is called dark energy, and it makes up about 70 percent of the universe's energy. It could be a property of empty space, but quantum theory's estimate for that is off by a factor of about 10^120, the worst prediction in physics. Recent surveys hint that dark energy may be weakening over time."
+      ]
+    },
+    {
+      "title": "the big bang's light",
+      "fact": "Some of the static on an old TV was light left over from the Big Bang.",
+      "more": [
+        "About 380,000 years after the Big Bang, the universe cooled enough for atoms to form, and became transparent. The light set free then has been travelling ever since.",
+        "The expansion of the universe has stretched it from the glow of a hot gas into microwaves, at just 2.7 degrees above absolute zero. It comes from every direction in the sky: the cosmic microwave background.",
+        "Two radio engineers found it by accident in 1964, and first blamed pigeon droppings in their antenna. About one percent of the snowy static on an old TV between channels was this ancient light. Tiny ripples in it, one part in 100,000, were the seeds of galaxies."
+      ]
+    },
+    {
+      "title": "no centre",
+      "fact": "The Big Bang was not an explosion at a point. It happened everywhere at once.",
+      "more": [
+        "It's natural to picture the Big Bang as a bomb going off in empty space, with galaxies flying out from a centre. But there was no centre, and no outside.",
+        "The Big Bang theory says that the whole of space was once extremely hot and dense, and has been expanding ever since. Every distant galaxy moves away from every other, like raisins in a rising loaf: from each raisin, the others seem to move away, and none is the centre.",
+        "If the universe is infinite now, it was probably infinite then too, only denser. The theory describes what happened from a tiny fraction of a second after the beginning. What came before, if 'before' even means anything, is unknown."
+      ]
+    },
+    {
+      "title": "the lazy sun",
+      "fact": "Your body makes more heat per litre than the core of the Sun.",
+      "more": [
+        "The Sun's core is about 15 million degrees and enormous, which is why the Sun shines so brightly. But for its volume, its fusion is surprisingly slow: about 300 watts per cubic metre at the very centre, like a compost heap.",
+        "A resting human makes about 100 watts in a body of about 0.07 cubic metres: over 1,000 watts per cubic metre, several times more.",
+        "The Sun is bright because its core is huge, not because it is intense. That slowness lets it burn steadily for 10 billion years. It is also why fusion reactors on Earth must run much hotter than the Sun's core: they can't wait billions of years for protons to fuse."
+      ]
+    },
+    {
+      "title": "the tunneling sun",
+      "fact": "The Sun shines only because protons tunnel through a wall they can't climb over.",
+      "more": [
+        "In the Sun's core, protons must get very close to fuse. But they are all positively charged, and repel each other. Even at 15 million degrees, a typical proton has about a thousand times too little energy to get over that electric wall.",
+        "So by classical physics, the Sun shouldn't shine at all. What saves it is quantum tunneling: there is a tiny chance that two protons pass through the barrier instead of over it.",
+        "The chance is tiny for each collision, but the core holds an astronomical number of protons, colliding all the time. The numbers work out to the Sun's real brightness. It was one of the first triumphs of quantum physics in the stars, worked out by George Gamow and others in the late 1920s."
+      ]
+    },
+    {
+      "title": "white dwarfs",
+      "fact": "Electrons can hold up a dead star, but only up to 1.4 times the mass of the Sun.",
+      "more": [
+        "When a star like the Sun runs out of fuel, it shrinks into a white dwarf: a ball about the size of the Earth, with half the Sun's mass or more. A teaspoon of it weighs several tons.",
+        "What holds it up isn't heat but the Pauli exclusion principle: the electrons are squeezed so close that they can't share states, and they push back. In 1930, on a ship to England, the 19-year-old Subrahmanyan Chandrasekhar realized that relativity limits this push, because the electrons can't go faster than light.",
+        "Above about 1.4 times the Sun's mass, gravity wins and the star collapses further, into a neutron star, or blows up. White dwarfs pushed past the limit explode as supernovae of almost the same brightness, which is how dark energy was found."
+      ]
+    },
+    {
+      "title": "magnetars",
+      "fact": "A magnetar is a magnet so strong it could wreck your atoms from 1,000 km away.",
+      "more": [
+        "A magnetar is a neutron star with the strongest magnetic field known: up to a thousand trillion times Earth's, and about a billion times stronger than the strongest steady magnet ever made in a lab.",
+        "At that strength, magnetism deforms atoms themselves, stretching their electron clouds into thin needles along the field. Within about a thousand kilometres, it would be deadly, tearing apart the chemistry of the molecules in your body.",
+        "Magnetars have starquakes, as their crust cracks under the strain. In 2004, a flare from one 50,000 light-years away was so bright that, for a fraction of a second, it measurably disturbed Earth's upper atmosphere."
+      ]
+    },
+    {
+      "title": "cosmic gold",
+      "fact": "Much of the gold in jewellery was forged when two neutron stars crashed together.",
+      "more": [
+        "Stars make elements by fusion, from helium up to iron. But fusing iron uses up energy instead of releasing it, so heavier elements need another way: piling neutrons onto nuclei very fast, faster than they can decay.",
+        "That needs a huge flood of neutrons. In 2017, gravitational wave detectors caught two neutron stars spiralling together 130 million light-years away, and telescopes saw the glow of the explosion that followed, a kilonova. Its light carried the fingerprints of freshly made heavy elements.",
+        "That one collision is estimated to have made several Earth masses of heavy elements, including gold and platinum. Such crashes, and perhaps rare kinds of supernova, are where most of the gold, platinum and uranium on Earth came from."
+      ]
+    },
+    {
+      "title": "the hoyle state",
+      "fact": "The carbon in you exists thanks to an energy level predicted because life exists.",
+      "more": [
+        "Stars make carbon by fusing three helium nuclei. But two helium nuclei stuck together, beryllium-8, fall apart in less than a millionth of a billionth of a second, so a third must hit in that instant. At first sight, that should make almost no carbon.",
+        "In 1953, Fred Hoyle argued that since carbon is plentiful (we are made of it), the carbon nucleus must have an energy level matching the energy of the three heliums: a resonance, which makes the reaction far more likely. Hoyle predicted its energy.",
+        "Experimenters looked, and found it where Hoyle said. It is now called the Hoyle state, and it is often given as an example of how finely tuned the laws of nature seem to be for life."
+      ]
+    },
+    {
+      "title": "inflation",
+      "fact": "Galaxies may have grown from quantum jitters, stretched to cosmic size in an instant.",
+      "more": [
+        "The cosmic microwave background is almost exactly the same temperature everywhere, even in parts of the sky that should never have been in contact. And space is very nearly flat. Both are hard to explain with a plain Big Bang.",
+        "Inflation explains them: in a tiny fraction of the first second, space expanded faster than it ever has since, doubling in size at least eighty times in a row. Any curve was ironed flat, and everything we see came from a patch that had once been in contact.",
+        "Quantum fluctuations, the tiny jitters every field has, were stretched to astronomical size. Slightly denser patches pulled in matter and grew into galaxies. If so, the largest structures in the universe began as quantum uncertainty. Inflation is widely accepted, but not yet proven."
+      ]
+    },
+    {
+      "title": "the dark night",
+      "fact": "Why is the night sky dark? The answer shows that the universe had a beginning.",
+      "more": [
+        "If the universe were infinite, unchanging and filled with stars forever, every line of sight would end on the surface of a star. The whole night sky would blaze as brightly as the Sun. This puzzle is called Olbers' paradox.",
+        "The dark sky tells us something is wrong with that picture. The main answer is that the universe has a finite age: light from stars too far away hasn't had time to reach us, and stars haven't been shining forever.",
+        "The expansion helps too, stretching distant light into dimmer, redder waves. In a way, the sky does glow in every direction: the cosmic microwave background, the Big Bang's light stretched far beyond what eyes can see. The writer Edgar Allan Poe guessed the right answer in 1848."
+      ]
+    },
+    {
+      "title": "the leaving moon",
+      "fact": "The Moon moves 3.8 cm farther from Earth every year, and our days get longer.",
+      "more": [
+        "The Moon's gravity raises tides on Earth. Earth spins faster than the Moon orbits, so the bulge of the tides is carried slightly ahead of the Moon, and its pull tugs the Moon forward, lifting it into a higher orbit.",
+        "In return, the Moon's pull on the bulge brakes Earth's spin. Our day grows longer by about 2 thousandths of a second every century. 400 million years ago, a year had about 400 days, which can be counted in the daily growth lines of fossil corals.",
+        "We know the Moon's distance so precisely because astronauts left mirrors on it. Observatories fire lasers at them and time the echo, to within millimetres."
+      ]
+    },
+    {
+      "title": "lagrange points",
+      "fact": "There are five places near Earth where a spacecraft can park, held by two gravities.",
+      "more": [
+        "Usually, the farther a spacecraft is from the Sun, the slower it orbits. But Earth's gravity adds to the Sun's. At a point 1.5 million kilometres beyond Earth, the extra pull is exactly enough for a craft to circle the Sun in one year, keeping pace with Earth.",
+        "That point, L2, is one of five Lagrange points, where gravity and orbital motion balance, worked out by Leonhard Euler and Joseph-Louis Lagrange in the 1700s. The James Webb Space Telescope orbits around L2, keeping the Sun, Earth and Moon on one side, behind its sunshield.",
+        "Two of the points, L4 and L5, are stable, so natural objects collect there. Jupiter has thousands of asteroids, called Trojans, sharing its orbit at its L4 and L5."
+      ]
+    },
+    {
+      "title": "supernova neutrinos",
+      "fact": "When a star explodes, 99% of the energy flies out as neutrinos, not light.",
+      "more": [
+        "When a heavy star's core collapses into a neutron star, it releases a vast amount of energy in seconds. You might think most of it comes out as the brilliant light we see. Only about 1 percent goes into the light and the blast.",
+        "The other 99 percent escapes as neutrinos, made as protons and electrons are crushed into neutrons. The core is so dense that even neutrinos are trapped for a moment, and they stream out over about ten seconds.",
+        "On 23 February 1987, a star exploded in a galaxy next to ours, and three detectors on Earth caught about two dozen of its neutrinos, a few hours before its light was seen. It confirmed the theory and began neutrino astronomy."
+      ]
+    },
+    {
+      "title": "two tides",
+      "fact": "Why are there two high tides a day, not one? Because gravity stretches.",
+      "more": [
+        "The Moon pulls on the whole Earth, but gravity weakens with distance, so it pulls the near side a bit more strongly than the centre, and the centre a bit more than the far side.",
+        "So the Earth is gently stretched along the line to the Moon. The near ocean is pulled toward the Moon a bit more than the Earth is, and the Earth a bit more than the far ocean, which is left behind. There's a bulge on both sides, and as Earth turns, each place passes through both bulges every day.",
+        "That stretching is a tidal force. Near a black hole, the same effect, made enormous, stretches anything that falls in. Tides from Jupiter knead its moon Io so hard that it is the most volcanic place in the solar system."
+      ]
+    },
+    {
+      "title": "fast radio bursts",
+      "fact": "Radio flashes from other galaxies, lasting a thousandth of a second, are a mystery.",
+      "more": [
+        "In 2007, astronomers digging through old radio telescope data found a single burst of radio waves, lasting a few thousandths of a second, from far beyond our galaxy. In that blink, such bursts give off as much energy as the Sun does in days, or even years.",
+        "Thousands have been found since. Some repeat, most flash only once. In 2020, one was caught coming from a magnetar inside our own galaxy, so at least some come from these super-magnetic neutron stars.",
+        "Each burst is also a probe. On the way to us, the longer radio waves lag behind the shorter ones, by an amount that counts the electrons along the path. That has been used to find ordinary matter hiding in the thin gas between galaxies."
+      ]
+    },
+    {
+      "title": "helium",
+      "fact": "Helium was found on the Sun 27 years before anyone found it on Earth.",
+      "more": [
+        "Each element absorbs and gives off light only at its own particular colors, like a barcode, because its electrons can only jump between certain energy levels. Split light into a rainbow and these barcodes show as sharp lines. This is spectroscopy.",
+        "During a solar eclipse in 1868, astronomers saw a bright yellow line in the light from the Sun's edge that matched no known element. Norman Lockyer named the new element helium, after Helios, the Greek word for the Sun.",
+        "In 1895 it was finally found on Earth, released from a uranium mineral. Spectroscopy is still how we know what stars, and the atmospheres of planets around other stars, are made of, without ever going there."
+      ]
+    },
+    {
+      "title": "a flat universe",
+      "fact": "On the largest scales, space is flat: huge triangles have angles adding up to 180 degrees.",
+      "more": [
+        "General relativity allows space itself to be curved. In a closed universe, like the surface of a ball, the angles of a huge triangle would add up to more than 180 degrees. In an open one, to less.",
+        "Cosmologists measured it with the spots in the cosmic microwave background, whose true size is known from physics. How big they look in the sky shows how space bent their light on the way here. They look just as big as they would in flat space, to within less than a percent.",
+        "A flat universe needs just the right amount of matter and energy, one of the puzzles inflation was invented to explain. It also suggests, but doesn't prove, that space goes on forever."
+      ]
+    },
+    {
+      "title": "old sunlight",
+      "fact": "The light you see from the Sun left its core tens of thousands of years ago.",
+      "more": [
+        "Energy is made in the Sun's core by fusion, as gamma rays. But the Sun's inside is so dense that light only travels a tiny distance, less than a centimetre, before it hits a particle and is sent off in a random direction.",
+        "So energy doesn't stream out: it staggers, like someone lost in a crowd, absorbed and given off again and again, slowly turning into lower-energy light. Estimates of how long it takes to reach the surface range from about ten thousand to over a hundred thousand years.",
+        "From the surface, it reaches Earth in just over 8 minutes. The sunlight warming you today began its journey before the end of the last ice age."
+      ]
+    },
+    {
+      "title": "the first minutes",
+      "fact": "Almost all the helium in the universe was made in its first few minutes.",
+      "more": [
+        "In its first second, the universe was a hot soup of protons, neutrons, electrons and light. As it expanded and cooled, after a few minutes, protons and neutrons could finally stick together without being blasted apart again.",
+        "For a few minutes, the whole universe was a fusion reactor. Almost all the neutrons ended up in helium, until the universe became too cold and thin to fuse. It stopped with about 75 percent hydrogen and 25 percent helium by mass, and a trace of lithium.",
+        "Those amounts match what we measure in the oldest stars and gas clouds, one of the strongest pieces of evidence for the Big Bang. Everything heavier, the carbon in you and the oxygen you breathe, was made much later, inside stars."
+      ]
+    },
+    {
+      "title": "the hot corona",
+      "fact": "The Sun's outer atmosphere is hundreds of times hotter than its surface. Why?",
+      "more": [
+        "The visible surface of the Sun is about 5,500 degrees. You would expect things to get cooler farther out, away from the heat. Instead the corona, the faint outer atmosphere seen during eclipses, is over a million degrees.",
+        "Something must carry energy up from below and release it there. The two main suspects are waves travelling along the Sun's magnetic field lines, and countless tiny explosions, nanoflares, where tangled field lines snap and reconnect.",
+        "NASA's Parker Solar Probe has been flying through the corona since 2021, closer to the Sun than anything ever made, to find out. So far, the evidence suggests both play a part."
+      ]
+    },
+    {
+      "title": "the 21 cm line",
+      "fact": "A hydrogen atom flips about once in 10 million years, and that maps our galaxy.",
+      "more": [
+        "In a hydrogen atom, both the proton and the electron have spin. When their spins point the same way, the atom has a tiny bit more energy than when they point opposite ways.",
+        "Flipping from one to the other gives off a radio wave 21 centimetres long. For a lone atom, this is so rare that it happens about once in 10 million years. But space holds so much hydrogen that the faint radio glow is everywhere.",
+        "Cold hydrogen gas gives off no visible light, so this radio line is how astronomers mapped the spiral arms of our galaxy and measured how fast galaxies spin, key evidence for dark matter. They hope to use it to see the universe before the first stars."
+      ]
+    }
+  ]
+}
